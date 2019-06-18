@@ -1,0 +1,61 @@
+/*variables and common styles import from "styles.scss"*/
+@import '../styles.scss';
+
+body{
+  position:relative;
+  height:100vh;
+}
+/*header*/
+.app-header { height: 50px; background-color: $header-color; box-shadow: 0px 0px 5px black;
+  .app-header-logo { margin: auto; height: 20px; width: 120px; }
+  .app-header-navbar {
+    .navbar-collapse-section {
+      .navbar-list {
+        li {
+          a { color: $white;
+            &:hover { color: $yellow; }
+           
+          }
+        }
+      }
+    }
+  }
+}
+
+/*top section (banner)*/
+.banner { background-image: url('../assets/banner.jpg'); height: 100vh; background-size: 100% 100%; background-repeat: no-repeat;
+  .banner-content-row {
+    .banner-content-column {
+      .heading {
+        .text-highlight { color: $yellow; }
+      }
+    }
+    .banner-down-btn-column { }
+  }
+  .banner-down-btn-column { position: absolute; bottom: 0%; }
+}
+
+
+
+/*header style for max screen size 767px*/
+@media only screen and (max-width:767px) {
+  .app-header { height: auto;
+    .app-header-logo { margin: 10px auto; }
+    .app-header-navbar {
+      button { margin: 5px 0px; }
+    }
+  }
+}
+
+/*for max screen size 425px*/
+@media only screen and (max-width:425px) {
+  //font size for each section heading and lead
+  .heading { font-size: $large-font }
+  .heading-lead-content { font-size: $small-font }
+}
+
+
+
+.scrollspy-example { position: relative; height: 100vh; overflow: auto; }
+
+

@@ -1,0 +1,20 @@
+/* You can add global styles to this file, and also import other style files */
+
+/*variables */
+$header-color: #003366;
+$logo-background-color: #2eb8b8;
+$large-font: 30px;
+$medium-font: 20px;
+$small-font: 15px;
+$yellow: yellow;
+$white: white;
+
+/*common classes*/
+
+.font-15 { font-size: $large-font; }
+.bg-black { background-color: black; }
+.font-sm-small { font-size: $small-font; } 
+.bg-grey { background-color: lightgray; }
+  /*scroll button*/
+.scrollBtn { position: fixed; border-radius: 20px; border: 1px solid black; z-index: 999; bottom: 10px; right: 10px; }
+.active { color:$yellow !important; }
