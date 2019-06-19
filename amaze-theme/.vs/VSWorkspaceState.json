@@ -3,6 +3,9 @@
     "",
     "\\src",
     "\\src\\app",
+    "\\src\\app\\styles",
+    "\\src\\app\\styles\\section-1-home",
+    "\\src\\app\\styles\\section-2-about",
     "\\src\\assets"
   ],
   "SelectedNode": "\\src\\app\\app.component.html",
