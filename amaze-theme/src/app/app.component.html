@@ -29,7 +29,7 @@
         <ul class="navbar-nav">
           <!--menu list items-->
           <li class="nav-item" *ngFor="let item of menuItems">
-            <a class="nav-link" (click)="scroll(target)" href="#{{item.value}}">{{item.name}}</a>
+            <a class="nav-link" href="#{{item.value}}">{{item.name}}</a>
           </li>
         </ul>
       </div>
@@ -75,7 +75,7 @@
 
 
   <!--section 2 (ABOUT)-->
-  <div class="container-fluid about-section" id="about" #target>
+  <div class="container-fluid about-section" id="about" >
 
     <!--header-->
     <div class="row d-flex about-section-header">
