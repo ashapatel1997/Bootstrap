@@ -1,0 +1,8 @@
+@import 'variables';
+
+/*--------------mixins--------------------*/
+
+/*mixin form slider banner backgound*/
+@mixin slider-banner-background($src) { background: url($src); background-attachment: fixed;  background-repeat: no-repeat; background-size: cover; height: 100vh; }
+
+

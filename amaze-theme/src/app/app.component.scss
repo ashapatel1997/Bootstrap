@@ -1,0 +1,22 @@
+/*styles for home section*/
+@import './styles/section-1-home/section-1-home.scss';
+
+/*styles form about section*/
+@import './styles/section-2-about/section-2-about.scss';
+
+
+/*----------header--------------*/
+.app-header { width: 100%; height: 50px; /*header logo*/ .app-header-logo { font-size: 25px; }
+  .app-header-navbar { font-size: $small-font; font-weight: 600;
+    ul {
+      li {
+        a { color: $text-color;
+          &:hover { color: $deep-orange; border-bottom: 4px solid $deep-orange; }
+        }
+      }
+    }
+  }
+}
+
+
+/*styles for the page sections defined in styles/(section-no.-name floder)*/

@@ -1,0 +1,18 @@
+/*mixins command variable import*/
+@import '../mixins & variables/_mixins.scss';
+@import '../mixins & variables/_variables.scss';
+
+/*---------------common classes---------------*/
+
+/*text and background color*/
+.text-deep-orange { color: $deep-orange; }
+.bg-deep-orange { background-color: $deep-orange; }
+
+/*dash*/
+.border { border-bottom: 4px solid $deep-orange !important; width: 50px; }
+@media only screen and (max-width:425px)
+{
+  .border { border-bottom: 2px solid $deep-orange !important; width: 40px; }
+
+}
+
