@@ -7,10 +7,17 @@
 /*styles for services section*/
 @import './styles/section-3-services/section-3-services.scss';
 
+/*styles for portfolio section*/
+@import './styles/section-4-portfolio/section-4-portfolio.scss';
+
+/*styles for team section*/
+@import './styles/section-5-team/section-5-team.scss';
+
 
 /*----------header--------------*/
 .app-header { width: 100%; height: 50px; /*header logo*/ .app-header-logo { font-size: 25px; }
   .app-header-navbar { font-size: $small-font; font-weight: 600;
+    .navbar-toggler { }
     ul {
       li {
         a { color: $text-color;
@@ -22,4 +29,4 @@
 }
 
 
-/*styles for the page sections defined in styles/(section-no.-name floder)*/
+/*styles for the page sections defined in styles/(section-number-name floder)*/

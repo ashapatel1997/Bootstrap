@@ -9,10 +9,11 @@
 .bg-deep-orange { background-color: $deep-orange; }
 
 /*dash*/
-.border { border-bottom: 4px solid $deep-orange !important; width: 50px; }
+.border { border: 4px solid $deep-orange !important; width: 50px; margin-top:20px}
 @media only screen and (max-width:425px)
 {
-  .border { border-bottom: 2px solid $deep-orange !important; width: 40px; }
+  .border { border: 2px solid $deep-orange !important; width: 40px; margin-top: 10px }
 
 }
+
 

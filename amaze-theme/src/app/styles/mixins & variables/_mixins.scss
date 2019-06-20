@@ -2,7 +2,9 @@
 
 /*--------------mixins--------------------*/
 
-/*mixin form slider banner backgound*/
+/*mixin for slider banner backgound*/
 @mixin slider-banner-background($src) { background: url($src); background-attachment: fixed;  background-repeat: no-repeat; background-size: cover; height: 100vh; }
 
 
+/*mixin for portfolio background*/
+@mixin portfolio-background($src) { background: url($src);  background-repeat: no-repeat; background-size: cover; opacity:1;}

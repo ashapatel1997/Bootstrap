@@ -1,0 +1,64 @@
+/*common class import*/
+@import '../common-class/common.scss';
+
+/*---------section-4 (PORTFOLIO)----------*/
+
+.portfolio-section { background-color: black; /*header*/
+                     .portfolio-section-header {
+    .header-content { margin-top: 50px;
+      .heading { font-size: $extra-large-font; color: $deep-orange; font-weight: 600; }
+      .heading-lead { font-size: $larg-font; font-weight: 400; color: white }
+    }
+  }
+  /*content*/ .portfolio-content {
+    .content-row {
+      .content-grid {
+        .content-card { border: none; height: 100%; border-radius: 0px;
+          .card-img { opacity: 0.5; height: 100%; border: none; border-radius: 0px; }
+          .card-body { top: 15%; color: white;
+            .body-heading { transition: 0.5s;
+              &:hover { font-size: $larg-font !important; font-weight: 600 !important; }
+            }
+            .body-heading-lead { transition: 1s;
+              &:hover { font-size: $medium-font; font-weight: 400; }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/*screen size max-width:767px*/
+@media only screen and (max-width:767px) {
+  /*-----------section-4 (PORTFOLIO)-------------*/
+  .portfolio-section { /*header*/ .portfolio-section-header {
+      .header-content { margin-top: 30px;
+        .heading { font-size: 40px; }
+        .heading-lead { font-size: $medium-font; }
+      }
+    }
+  }
+}
+
+/*screen size max-width:425px*/
+@media only screen and (max-width:425px) {
+  
+  /*-----------section-4 (PORTFOLIO)-------------*/
+  .portfolio-section { /*header*/ .portfolio-section-header {
+      .header-content {
+        .heading { font-size: $larg-font; }
+        .heading-lead { font-size: 10px; }
+      }
+    }
+  }
+}
+
+
+
+
+/*-----------overlay----------*/
+.overlay { opacity: 1; transition: 1s;
+  &:hover { cursor: pointer; opacity: 0.9; }
+}

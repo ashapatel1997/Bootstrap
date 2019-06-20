@@ -4,7 +4,7 @@
 /*section-2 (ABOUT)*/
 .about-section {
   .about-section-header {
-    .header-content { margin-top: 30px;
+    .header-content { margin-top: 50px;
       .heading { font-size: $extra-large-font; color: $deep-orange; font-weight: 600; }
       .heading-lead { font-size: $larg-font; font-weight: 400; }
     }
@@ -16,8 +16,8 @@
     }
     .content-data {
       .content-data-heading { font-size: 18px; font-weight: 400; }
-      ul {padding:25px; 
-        li {font-size:$medium-font; }
+      ul { padding: 25px;
+        li { font-size: $medium-font; }
       }
     }
   }
@@ -29,12 +29,11 @@
 @media only screen and (max-width:767px) { /*-----------section-2 (ABOUT)-------------*/
   .about-section {
     .about-section-header {
-      .header-content {
-        .heading { font-size: 40PX; }
+      .header-content { margin-top: 30px;
+        .heading { font-size: 40px; }
         .heading-lead { font-size: $medium-font; }
       }
     }
-  
   }
 }
 

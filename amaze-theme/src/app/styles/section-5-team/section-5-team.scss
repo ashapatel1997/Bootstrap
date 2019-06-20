@@ -1,0 +1,113 @@
+/*common class import*/
+@import '../common-class/common.scss';
+
+/*---------section-5 (TEAM)----------*/
+.team-section { background-color: $light-grey; /*header*/ .team-section-header {
+    .header-content { margin-top: 50px;
+      .heading { font-size: $extra-large-font; color: $deep-orange; font-weight: 600; }
+      .heading-lead { font-size: $larg-font; font-weight: 400; }
+    }
+  }
+  /*content*/ .team-content {
+    .content-row {
+      .content-grid {
+        .content-card { padding: 0px; border: none; border-top-left-radius: 50%; transition: 1s;
+          .team-member-img { transition: 1s; }
+          .card-body { padding: 20px 0px 0px;
+            .member-name { font-size: $larg-font; font-weight: 600; text-align: center }
+            .member-designation { font-size: $medium-font; font-weight: 400; text-align: center; }
+            .member-description { margin-top: 10px; font-size: $small-font; }
+            .member-view-profile-button { color: white; background-color: $deep-orange !important; width: 100%; border: none !important; border-radius: unset; font-size: $medium-font;
+              &:hover { background-color: #d85b0e !important; }
+              &:focus { outline: $deep-orange !important; box-shadow: none !important;  }
+              &:active { outline: $deep-orange !important; box-shadow: none !important;  }
+            }
+          }
+          &:hover { cursor: pointer; opacity: 0.7;
+            .team-member-img { border-top-left-radius: 40%; border-top-right-radius: 40%; }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.btn { background-color: $deep-orange !important; height: 50px; width: 185px; font-size: $medium-font; margin-top: $mt-20;
+          &:hover { background-color: #d85b0e !important; }
+        }*/
+
+
+/*screen size max-width:767px*/
+@media only screen and (max-width:767px) {
+  /*---------section-5 (TEAM)----------*/
+  .team-section { /*header*/ .team-section-header {
+      .header-content { margin-top: 30px;
+        .heading { font-size: 40px; }
+        .heading-lead { font-size: $medium-font; }
+      }
+    }
+  }
+  /*content*/ .team-content {
+    .content-row {
+      .content-grid {
+        .content-card { padding: 0px; border: none; border-top-left-radius: 50%; transition: 1s;
+          .team-member-img { transition: 1s; }
+          .card-body { padding: 20px 0px 0px;
+            .member-name { font-size: $larg-font; font-weight: 600; text-align: center }
+            .member-designation { font-size: $medium-font; font-weight: 400; text-align: center; }
+            .member-description { margin-top: 10px; font-size: $small-font; }
+            .member-view-profile-button { color: white; background-color: $deep-orange !important; width: 100%; border: none !important; border-radius: unset; font-size:  10px;
+            
+            }
+          }
+          &:hover { cursor: pointer; opacity: 0.7;
+            .team-member-img { border-top-left-radius: 40%; border-top-right-radius: 40%; }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/*screen size max-width:425px*/
+@media only screen and (max-width:425px) {
+  /*---------section-5 (TEAM)----------*/
+  .team-section { /*header*/ .team-section-header {
+      .header-content { margin-top: 50px;
+        .heading { font-size: $larg-font; }
+        .heading-lead { font-size: 10px; }
+      }
+    }
+  }
+
+}
