@@ -8,3 +8,7 @@
 
 /*mixin for portfolio background*/
 @mixin portfolio-background($src) { background: url($src);  background-repeat: no-repeat; background-size: cover; opacity:1;}
+
+
+/*mixin for plan section font style*/
+@mixin plan($font-size,$font-weight) { font-size: $font-size; font-weight: $font-weight; }

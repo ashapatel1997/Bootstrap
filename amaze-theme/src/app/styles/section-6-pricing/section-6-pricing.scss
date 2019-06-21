@@ -1,0 +1,81 @@
+/*common class import*/
+@import '../common-class/common.scss';
+
+
+/*-----------section-6 (PRICING)---------*/
+
+
+/*header*/
+.pricing-section {
+  .pricing-section-header { margin-top: 50px;
+    .header-content {
+      .heading { font-size: $extra-large-font; color: $deep-orange; font-weight: 600; }
+      .heading-lead { font-size: $larg-font; font-weight: 400; }
+    }
+  }
+}
+
+
+/*content*/
+.pricing-content { margin-bottom: 50px;
+  .plan-content-row {
+    .plan-content-grid { background-color: $light-grey; }
+  }
+}
+
+/*inner-grid form plan-section content*/
+.plan-content-inner-row {
+  .plan-type-grid {
+    .plan-type-name {
+     @include plan($larg-font,600);
+    }
+  }
+  .plan-price-grid {
+    .plan-price-value {
+      @include plan($larg-font,600);
+    }
+  }
+  .plan-support-grid {
+    .plan-support-time {
+      @include plan($medium-font,400);
+    }
+  }
+  .plan-buy-grid {
+    .plan-buy-domain {
+      @include plan($medium-font,400);
+    }
+    .plan-buy-btn { color: white; background-color: $deep-orange !important;  border: $deep-orange !important;  font-size: $medium-font;
+      &:hover { background-color: #d85b0e !important; }
+      &:focus { outline: $deep-orange !important; box-shadow: none !important; }
+      &:active { outline: $deep-orange !important; box-shadow: none !important; }
+    }
+  }
+}
+
+/*screen size max-width:767px*/
+@media only screen and (max-width:767px) {
+
+  .pricing-section { /*header*/ .pricing-section-header { margin-top: 30px;
+      .header-content {
+        .heading { font-size: 40px; }
+        .heading-lead { font-size: $medium-font; }
+      }
+    }
+  }
+  
+   
+
+}
+
+/*screen size max-width:425px*/
+@media only screen and (max-width:425px) {
+
+  .pricing-section { /*header*/ .pricing-section-header {
+      .header-content { 
+        .heading { font-size: $larg-font; }
+        .heading-lead { font-size: 10px; }
+      }
+    }
+  }
+
+}

@@ -4,10 +4,9 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\styles",
-    "\\src\\app\\styles\\section-1-home",
-    "\\src\\app\\styles\\section-2-about",
-    "\\src\\assets"
+    "\\src\\app\\styles\\section-4-portfolio",
+    "\\src\\app\\styles\\section-5-team"
   ],
-  "SelectedNode": "\\src\\app\\app.component.ts",
+  "SelectedNode": "\\src\\app\\app.component.html",
   "PreviewInSolutionExplorer": false
 }
