@@ -3,7 +3,7 @@
 
 /*---------section-4 (PORTFOLIO)----------*/
 
-.portfolio-section { background-color: black; /*header*/ .portfolio-section-header {
+.portfolio-section { background-color: #000000; /*header*/ .portfolio-section-header {
     .header-content { margin-top: $mt-50;
       .heading {
         color: $deep-orange;
@@ -19,10 +19,26 @@
     .content-row {
       .content-grid {
         .content-card { border: none; height: 100%; border-radius: 0px;
-          .card-img { opacity: 0.5; height: 100%; border: none; border-radius: 0px; }
-          .card-body { top: 15%; color: white;
-            .body-heading { transition: 0.5s; }
-            .body-heading-lead { transition: 1s; }
+          .card-img { height: 100%; border: none; border-radius: 0px; }
+          .card-body { transition: 0.5s; top: 15%; color: white;
+            .body-heading { transition: 0.5s;
+              &:hover { font-size: $larg-font; font-weight: 700; cursor: auto; }
+            }
+            .body-heading-lead { transition: 0.5s;
+              &:hover { font-size: $medium-font; font-weight: 400; cursor: auto; }
+            }
+            .view-more-btn {
+              transition: 0.5s;
+              @include button-style($deep-orange,40px,175px,$medium-font,$mt-0);
+              color: white;
+
+              &:hover {
+                font-weight: 400;
+
+                @include button-style($deep-orange,35px,165px,$larg-font,$mt-0);
+                padding: 0px;
+              }
+            }
           }
         }
       }
@@ -62,5 +78,10 @@
 
 /*-----------overlay----------*/
 .overlay { opacity: 1; transition: 1s;
-  &:hover { cursor: pointer; opacity: 0.9; }
+  .card-body { opacity: 0; }
+  &:hover { cursor: pointer;
+    .card-body { opacity: 1;
+     
+    }
+  }
 }
