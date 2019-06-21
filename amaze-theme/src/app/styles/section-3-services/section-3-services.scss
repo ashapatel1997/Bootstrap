@@ -14,7 +14,7 @@
       }
     }
   }
-  /*content*/ .services-content {
+  /*content*/ .services-content { padding-bottom: 30px;
     .content-row {
       .content-grid {
         .content-card { background-color: $light-grey; border: none;
@@ -25,17 +25,16 @@
             }
             .body-heading-lead {
               @include font($medium-font,$normal);
-              
             }
           }
-           }
+        }
       }
     }
   }
 }
 
 
-/*screen size max-width:767px*/
+/*maximum screen width 767px*/
 @media only screen and (max-width:767px) {
   /*-----------section-3 (SERVICES)-------------*/
   .services-section {
@@ -50,7 +49,7 @@
 
 
 
-/*screen size max-width:425px*/
+/*maximum screen width 425px*/
 @media only screen and (max-width:425px) {
   /*-----------section-3 (SERVICES)-------------*/
   .services-section {

@@ -39,11 +39,11 @@
   }
 }
 
-/*screen size max-width:768px*/
+/*maximum screen width 768px*/
 @media only screen and (max-width:768px) {
 
-  .contact-section { 
-    .subscription-section { padding-top: 0px; /*simple heading to subscribe*/ .subscription-section-grid {
+  .contact-section {
+    .subscription-section { padding:  0px; /*simple heading to subscribe*/ .subscription-section-grid {
         .subscribe-heading {
           .heading { font-size: 25px; }
         }
@@ -70,7 +70,7 @@
   }
 }
 
-/*screen size max-width:425px*/
+/*maximum screen width 425px*/
 @media only screen and (max-width:425px) {
 
   .contact-section {

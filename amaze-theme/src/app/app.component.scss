@@ -34,5 +34,12 @@
   }
 }
 
+/*-----------------footer------------------*/
+.footer { font-size: $medium-font; }
+
+/*maximum screen width 425px*/
+@media only screen and (max-width:425px) {
+  .footer { font-size: $small-font; }
+}
 
 /*styles for the page sections defined in styles/(section-number-name floder)*/

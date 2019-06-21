@@ -14,7 +14,7 @@
       }
     }
   }
-  .about-section-content {
+  .about-section-content {margin-bottom:$mb-50;
     .content-img {
 
       img { height: 100%; }
@@ -32,7 +32,7 @@
 
 
 
-/*screen size max-width:767px*/
+/*maximum screen width 767px*/
 @media only screen and (max-width:767px) { /*-----------section-2 (ABOUT)-------------*/
   .about-section {
     .about-section-header {
@@ -41,10 +41,11 @@
         .heading-lead { font-size: $medium-font; }
       }
     }
+    .about-section-content { margin-bottom: $mb-0; }
   }
-}
+  }
 
-/*screen size max-width:425px*/
+/*maximum screen width 425px*/
 @media only screen and (max-width:425px) {
   /*-----------section-2 (ABOUT)-------------*/
   .about-section {

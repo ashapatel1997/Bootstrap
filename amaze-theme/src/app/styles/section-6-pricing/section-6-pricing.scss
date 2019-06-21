@@ -21,7 +21,7 @@
 
 
 /*content*/
-.pricing-content { margin-bottom: $mt-50;
+.pricing-content { 
   .plan-content-row {
     .plan-content-grid { background-color: $light-grey; }
   }
@@ -48,7 +48,7 @@
     .plan-buy-domain {
       @include font($medium-font,$normal);
     }
-    .plan-buy-btn { color: white; background-color: $deep-orange; border: $deep-orange; font-size: $medium-font;
+    .plan-buy-btn {  font-size: $medium-font;
       &:hover { background-color: #d85b0e !important; }
       &:focus { outline: $deep-orange !important; box-shadow: none !important; }
       &:active { outline: $deep-orange !important; box-shadow: none !important; }
@@ -57,7 +57,7 @@
 }
 
 
-/*screen size max-width:767px*/
+/*maximum screen width 767px*/
 @media only screen and (max-width:767px) {
 
   .pricing-section { /*header*/ .pricing-section-header { margin-top: $mt-30;
@@ -69,7 +69,7 @@
   }
 }
 
-/*screen size max-width:425px*/
+/*maximum screen width 425px*/
 @media only screen and (max-width:425px) {
 
   .pricing-section { /*header*/ .pricing-section-header {
@@ -79,5 +79,10 @@
       }
     }
   }
-
+  /*content*/
+  .pricing-content { padding-bottom: 0px;
+    .plan-content-row {
+      .plan-content-grid { background-color: $light-grey; }
+    }
+  }
 }
