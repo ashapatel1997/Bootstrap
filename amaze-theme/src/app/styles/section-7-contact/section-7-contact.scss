@@ -1,0 +1,98 @@
+/*common class import*/
+@import '../common-class/common.scss';
+
+/*-----section 7 (CONTACT)---------*/
+.contact-section { background-color: #333333;
+  .subscription-section { padding-top: 50px; /*simple heading to subscribe*/ .subscription-section-grid {
+      .subscribe-heading {
+        .heading { font-weight: 600; font-size: 25px; }
+      }
+    }
+  }
+}
+
+
+/*subscription form in contact-section*/
+.subscribe-form-section {
+  .subscribe-form {
+    .form-group {
+      .subscribe-form-grid {
+        .email-input-column {
+          .email-input { color: white; background-color: #333333;
+            &:focus { outline: $deep-orange !important; box-shadow: none !important; border-bottom: 1px solid $deep-orange; }
+            &:active { outline: $deep-orange !important; box-shadow: none !important; border-bottom: 1px solid $deep-orange; }
+          }
+        }
+        .subscribe-button-column {
+          .subscribe-button { background-color: $deep-orange; width: 185px; height: 50px; border: none; font-size: $medium-font;
+            &:hover { background-color: #d85b0e !important; }
+            &:focus { outline: $deep-orange !important; box-shadow: none !important; }
+            &:active { outline: $deep-orange !important; box-shadow: none !important; }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+/*screen size max-width:768px*/
+@media only screen and (max-width:768px) {
+
+  .contact-section { background-color: black;
+    .subscription-section { padding-top: 0px; /*simple heading to subscribe*/ .subscription-section-grid {
+        .subscribe-heading {
+          .heading { font-size: 25px; }
+        }
+      }
+    }
+  }
+  /*subscription form in contact-section*/
+  .subscribe-form-section {
+    .subscribe-form {
+      .form-group {
+        .subscribe-form-grid {
+          .email-input-column {
+            .email-input { font-size: $small-font;
+                    }
+          }
+          .subscribe-button-column {
+            .subscribe-button { height: 40px; width: 155px; font-size: $small-font; margin-top: $mt-10; }
+          }
+        }
+      }
+    }
+  }
+}
+
+/*screen size max-width:425px*/
+@media only screen and (max-width:425px) {
+
+  .contact-section { background-color: black;
+    .subscription-section {padding-top:20px;
+      /*simple heading to subscribe*/ .subscription-section-grid {
+        .subscribe-heading {
+          .heading { font-size:$larg-font; }
+        }
+      }
+    }
+  }
+  /*subscription form in contact-section*/
+  .subscribe-form-section {
+    .subscribe-form {
+      .form-group {
+        .subscribe-form-grid {
+          .email-input-column {
+            .email-input { 
+             
+            }
+          }
+          .subscribe-button-column {
+            .subscribe-button { height: 30px; width: 125px; font-size: $small-font; margin-top: $m-0; padding: $p-0; }
+          }
+        }
+      }
+    }
+  }
+}

@@ -44,7 +44,7 @@
     .plan-buy-domain {
       @include plan($medium-font,400);
     }
-    .plan-buy-btn { color: white; background-color: $deep-orange !important;  border: $deep-orange !important;  font-size: $medium-font;
+    .plan-buy-btn { color: white; background-color:$deep-orange;  border: $deep-orange;  font-size: $medium-font;
       &:hover { background-color: #d85b0e !important; }
       &:focus { outline: $deep-orange !important; box-shadow: none !important; }
       &:active { outline: $deep-orange !important; box-shadow: none !important; }
