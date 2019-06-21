@@ -4,9 +4,14 @@
 /*section-2 (ABOUT)*/
 .about-section {
   .about-section-header {
-    .header-content { margin-top: 50px;
-      .heading { font-size: $extra-large-font; color: $deep-orange; font-weight: 600; }
-      .heading-lead { font-size: $larg-font; font-weight: 400; }
+    .header-content { margin-top: $mt-50;
+      .heading {
+        color: $deep-orange;
+        @include font($extra-large-font,$semi-bold);
+      }
+      .heading-lead {
+        @include font($larg-font,$normal);
+      }
     }
   }
   .about-section-content {
@@ -15,7 +20,9 @@
       img { height: 100%; }
     }
     .content-data {
-      .content-data-heading { font-size: 18px; font-weight: 400; }
+      .content-data-heading {
+        @include font(18px,$normal);
+      }
       ul { padding: 25px;
         li { font-size: $medium-font; }
       }
@@ -29,7 +36,7 @@
 @media only screen and (max-width:767px) { /*-----------section-2 (ABOUT)-------------*/
   .about-section {
     .about-section-header {
-      .header-content { margin-top: 30px;
+      .header-content { margin-top: $mt-30;
         .heading { font-size: 40px; }
         .heading-lead { font-size: $medium-font; }
       }
@@ -45,7 +52,7 @@
 
       .header-content {
         .heading { font-size: $larg-font; }
-        .heading-lead { font-size: 10px; }
+        .heading-lead { font-size: $extra-small-font; }
       }
     }
     .about-section-content {
@@ -53,7 +60,7 @@
       .content-data {
         .content-data-heading { font-size: 13px;  }
         ul { padding: 10px 0px 10px 15px;
-          li { font-size: 10px; }
+          li { font-size: $extra-small-font; }
         }
       }
     }

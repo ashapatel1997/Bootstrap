@@ -5,9 +5,9 @@
 
 .portfolio-section { background-color: black; /*header*/
                      .portfolio-section-header {
-    .header-content { margin-top: 50px;
-      .heading { font-size: $extra-large-font; color: $deep-orange; font-weight: 600; }
-      .heading-lead { font-size: $larg-font; font-weight: 400; color: white }
+    .header-content { margin-top: $mt-50;
+      .heading {  color: $deep-orange;  @include font($extra-large-font,$semi-bold); }
+      .heading-lead { color: white ; @include font($larg-font,$normal);}
     }
   }
   /*content*/ .portfolio-content {
@@ -17,10 +17,10 @@
           .card-img { opacity: 0.5; height: 100%; border: none; border-radius: 0px; }
           .card-body { top: 15%; color: white;
             .body-heading { transition: 0.5s;
-              &:hover { font-size: $larg-font !important; font-weight: 600 !important; }
+              
             }
             .body-heading-lead { transition: 1s;
-              &:hover { font-size: $medium-font; font-weight: 400; }
+             
             }
           }
         }
@@ -34,7 +34,7 @@
 @media only screen and (max-width:767px) {
   /*-----------section-4 (PORTFOLIO)-------------*/
   .portfolio-section { /*header*/ .portfolio-section-header {
-      .header-content { margin-top: 30px;
+      .header-content { margin-top: $mt-30;
         .heading { font-size: 40px; }
         .heading-lead { font-size: $medium-font; }
       }
@@ -49,7 +49,7 @@
   .portfolio-section { /*header*/ .portfolio-section-header {
       .header-content {
         .heading { font-size: $larg-font; }
-        .heading-lead { font-size: 10px; }
+        .heading-lead { font-size: $extra-small-font; }
       }
     }
   }

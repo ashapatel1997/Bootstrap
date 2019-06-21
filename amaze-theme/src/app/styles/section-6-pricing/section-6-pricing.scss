@@ -4,20 +4,24 @@
 
 /*-----------section-6 (PRICING)---------*/
 
-
 /*header*/
 .pricing-section {
-  .pricing-section-header { margin-top: 50px;
+  .pricing-section-header { margin-top: $mt-50;
     .header-content {
-      .heading { font-size: $extra-large-font; color: $deep-orange; font-weight: 600; }
-      .heading-lead { font-size: $larg-font; font-weight: 400; }
+      .heading {
+        color: $deep-orange;
+        @include font($extra-large-font,$semi-bold);
+      }
+      .heading-lead {
+        @include font($larg-font,$normal);
+      }
     }
   }
 }
 
 
 /*content*/
-.pricing-content { margin-bottom: 50px;
+.pricing-content { margin-bottom: $mt-50;
   .plan-content-row {
     .plan-content-grid { background-color: $light-grey; }
   }
@@ -27,24 +31,24 @@
 .plan-content-inner-row {
   .plan-type-grid {
     .plan-type-name {
-     @include plan($larg-font,600);
+      @include font($larg-font,$semi-bold);
     }
   }
   .plan-price-grid {
     .plan-price-value {
-      @include plan($larg-font,600);
+      @include font($larg-font,$semi-bold);
     }
   }
   .plan-support-grid {
     .plan-support-time {
-      @include plan($medium-font,400);
+      @include font($medium-font,$normal);
     }
   }
   .plan-buy-grid {
     .plan-buy-domain {
-      @include plan($medium-font,400);
+      @include font($medium-font,$normal);
     }
-    .plan-buy-btn { color: white; background-color:$deep-orange;  border: $deep-orange;  font-size: $medium-font;
+    .plan-buy-btn { color: white; background-color: $deep-orange; border: $deep-orange; font-size: $medium-font;
       &:hover { background-color: #d85b0e !important; }
       &:focus { outline: $deep-orange !important; box-shadow: none !important; }
       &:active { outline: $deep-orange !important; box-shadow: none !important; }
@@ -52,19 +56,17 @@
   }
 }
 
+
 /*screen size max-width:767px*/
 @media only screen and (max-width:767px) {
 
-  .pricing-section { /*header*/ .pricing-section-header { margin-top: 30px;
+  .pricing-section { /*header*/ .pricing-section-header { margin-top: $mt-30;
       .header-content {
         .heading { font-size: 40px; }
         .heading-lead { font-size: $medium-font; }
       }
     }
   }
-  
-   
-
 }
 
 /*screen size max-width:425px*/
@@ -73,7 +75,7 @@
   .pricing-section { /*header*/ .pricing-section-header {
       .header-content { 
         .heading { font-size: $larg-font; }
-        .heading-lead { font-size: 10px; }
+        .heading-lead { font-size: $extra-small-font; }
       }
     }
   }

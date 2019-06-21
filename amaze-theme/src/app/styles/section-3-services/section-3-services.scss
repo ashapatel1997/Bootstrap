@@ -3,25 +3,32 @@
 
 
 /*---------section-3 (SERVICES)----------*/
-.services-section { background-color: $light-grey;
-                    /*header*/ .services-section-header {
-    .header-content { margin-top:50px;
-      .heading { font-size: $extra-large-font; color: $deep-orange; font-weight: 600; }
-      .heading-lead { font-size: $larg-font; font-weight: 400; }
+.services-section { background-color: $light-grey; /*header*/ .services-section-header {
+    .header-content { margin-top: $mt-50;
+      .heading {
+        color: $deep-orange;
+        @include font($extra-large-font,$semi-bold);
+      }
+      .heading-lead {
+        @include font($larg-font,$normal);
+      }
     }
   }
   /*content*/ .services-content {
     .content-row {
       .content-grid {
-        .content-card { background-color: $light-grey; border:none;
-          .card-img-top {  }
+        .content-card { background-color: $light-grey; border: none;
+          .card-img-top { }
           .card-body {
-            .body-heading { font-size: $larg-font; font-weight: 600; }
-            .body-heading-lead { font-size: $medium-font; font-weight: 400; }
+            .body-heading {
+              @include font($larg-font,$semi-bold);
+            }
+            .body-heading-lead {
+              @include font($medium-font,$normal);
+              
+            }
           }
-
-          /*&:hover { box-shadow: 2px 2px 30px grey; cursor: auto; background-color: white; transition: box-shadow 0.5s ease-in-out; }*/
-        }
+           }
       }
     }
   }
@@ -33,7 +40,7 @@
   /*-----------section-3 (SERVICES)-------------*/
   .services-section {
     .services-section-header {
-      .header-content { margin-top: 30px;
+      .header-content { margin-top: $mt-30;
         .heading { font-size: 40px; }
         .heading-lead { font-size: $medium-font; }
       }
@@ -51,7 +58,7 @@
 
       .header-content {
         .heading { font-size: $larg-font; }
-        .heading-lead { font-size: 10px; }
+        .heading-lead { font-size: $extra-small-font; }
       }
     }
     /*content*/ .services-content {

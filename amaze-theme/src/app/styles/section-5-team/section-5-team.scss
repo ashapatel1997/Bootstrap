@@ -2,11 +2,15 @@
 @import '../common-class/common.scss';
 
 /*---------section-5 (TEAM)----------*/
-.team-section { background-color: $light-grey;
-                /*header*/ .team-section-header {
-    .header-content { margin-top: 50px;
-      .heading { font-size: $extra-large-font; color: $deep-orange; font-weight: 600; }
-      .heading-lead { font-size: $larg-font; font-weight: 400; }
+.team-section { background-color: $light-grey; /*header*/ .team-section-header {
+    .header-content { margin-top: $mt-50;
+      .heading {
+        color: $deep-orange;
+        @include font($extra-large-font,$semi-bold);
+      }
+      .heading-lead {
+        @include font($larg-font,$normal);
+      }
     }
   }
   /*content*/ .team-content {
@@ -15,13 +19,19 @@
         .content-card { padding: 0px; border: none; border-top-left-radius: 50%; transition: 1s;
           .team-member-img { transition: 1s; }
           .card-body { padding: 20px 0px 0px;
-            .member-name { font-size: $larg-font; font-weight: 600; text-align: center }
-            .member-designation { font-size: $medium-font; font-weight: 400; text-align: center; }
-            .member-description { margin-top: 10px; font-size: $small-font; }
-            .member-view-profile-button { color: white; background-color: $deep-orange !important; width: 100%; border: none !important; border-radius: unset; font-size: $medium-font;
-              &:hover { background-color: #d85b0e !important; }
-              &:focus { outline: $deep-orange !important; box-shadow: none !important;  }
-              &:active { outline: $deep-orange !important; box-shadow: none !important;  }
+            .member-name {
+              text-align: center;
+              @include font($larg-font,$semi-bold);
+            }
+            .member-designation {
+              text-align: center;
+              @include font($medium-font,$normal);
+            }
+            .member-description { margin-top: $mt-10; font-size: $small-font; }
+            .member-view-profile-button { @include button-style($deep-orange,50px,185px,$medium-font,$mt-20); color: white; background-color: $deep-orange !important; width: 100%; border: none !important; border-radius: unset; font-size: $medium-font;
+               &:hover { background-color: #d85b0e ; }
+          &:focus { outline: $deep-orange; box-shadow: none; }
+          &:active { outline: $deep-orange; box-shadow: none; }
             }
           }
           &:hover { cursor: pointer; opacity: 0.7;
@@ -39,7 +49,7 @@
   /*---------section-5 (TEAM)----------*/
   .team-section { /*header*/
                   .team-section-header {
-      .header-content { margin-top: 30px;
+      .header-content { margin-top: $mt-30;
         .heading { font-size: 40px; }
         .heading-lead { font-size: $medium-font; }
       }
@@ -53,9 +63,9 @@
 @media only screen and (max-width:425px) {
   /*---------section-5 (TEAM)----------*/
   .team-section { /*header*/ .team-section-header {
-      .header-content { margin-top: 50px;
+      .header-content { margin-top: $mt-50;
         .heading { font-size: $larg-font; }
-        .heading-lead { font-size: 10px; }
+        .heading-lead { font-size: $extra-small-font; }
       }
     }
   }

@@ -3,9 +3,11 @@
 
 /*-----section 7 (CONTACT)---------*/
 .contact-section { background-color: #333333;
-  .subscription-section { padding-top: 50px; /*simple heading to subscribe*/ .subscription-section-grid {
+  .subscription-section { padding: 50px 0px; /*simple heading to subscribe*/ .subscription-section-grid {
       .subscribe-heading {
-        .heading { font-weight: 600; font-size: 25px; }
+        .heading {
+          @include font(25px,$semi-bold);
+        }
       }
     }
   }
@@ -24,10 +26,12 @@
           }
         }
         .subscribe-button-column {
-          .subscribe-button { background-color: $deep-orange; width: 185px; height: 50px; border: none; font-size: $medium-font;
+          .subscribe-button {
+            @include button-style($deep-orange,50px,185px,$medium-font,$mt-0);
+            border: none;
             &:hover { background-color: #d85b0e !important; }
-            &:focus { outline: $deep-orange !important; box-shadow: none !important; }
-            &:active { outline: $deep-orange !important; box-shadow: none !important; }
+            &:focus { outline: $deep-orange; box-shadow: none ; }
+            &:active { outline: $deep-orange ; box-shadow: none ; }
           }
         }
       }
@@ -35,12 +39,10 @@
   }
 }
 
-
-
 /*screen size max-width:768px*/
 @media only screen and (max-width:768px) {
 
-  .contact-section { background-color: black;
+  .contact-section { 
     .subscription-section { padding-top: 0px; /*simple heading to subscribe*/ .subscription-section-grid {
         .subscribe-heading {
           .heading { font-size: 25px; }
@@ -54,11 +56,13 @@
       .form-group {
         .subscribe-form-grid {
           .email-input-column {
-            .email-input { font-size: $small-font;
-                    }
+            .email-input { font-size: $small-font; }
           }
           .subscribe-button-column {
-            .subscribe-button { height: 40px; width: 155px; font-size: $small-font; margin-top: $mt-10; }
+            .subscribe-button {
+              @include button-style($deep-orange,40px,155px,$small-font,$mt-10);
+        
+            }
           }
         }
       }
@@ -69,7 +73,7 @@
 /*screen size max-width:425px*/
 @media only screen and (max-width:425px) {
 
-  .contact-section { background-color: black;
+  .contact-section {
     .subscription-section {padding-top:20px;
       /*simple heading to subscribe*/ .subscription-section-grid {
         .subscribe-heading {
@@ -84,12 +88,13 @@
       .form-group {
         .subscribe-form-grid {
           .email-input-column {
-            .email-input { 
-             
-            }
+            .email-input { }
           }
           .subscribe-button-column {
-            .subscribe-button { height: 30px; width: 125px; font-size: $small-font; margin-top: $m-0; padding: $p-0; }
+            .subscribe-button {
+              padding: $p-0;
+              @include button-style($deep-orange,30px,125px,$small-font,$mt-0);
+            }
           }
         }
       }
