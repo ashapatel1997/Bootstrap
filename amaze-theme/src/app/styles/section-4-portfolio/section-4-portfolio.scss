@@ -25,6 +25,10 @@
               .body-heading {
                 cursor: auto;
                 @include font($larg-font,$semi-bold);
+
+                .fa-star-half-o {
+                  @include font($extra-large-font,$semi-bold);
+                }
               }
               .body-heading-lead {
                 cursor: auto;
