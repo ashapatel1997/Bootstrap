@@ -19,26 +19,28 @@
     .content-row {
       .content-grid {
         .content-card { border: none; height: 100%; border-radius: 0px;
-          .card-img { height: 100%; border: none; border-radius: 0px; }
-          .card-body { transition: 0.5s; top: 15%; color: white;
-            .body-heading { transition: 0.5s;
-              &:hover { font-size: $larg-font; font-weight: 700; cursor: auto; }
-            }
-            .body-heading-lead { transition: 0.5s;
-              &:hover { font-size: $medium-font; font-weight: 400; cursor: auto; }
-            }
-            .view-more-btn {
-              transition: 0.5s;
-              @include button-style($deep-orange,40px,175px,$medium-font,$mt-0);
-              color: white;
-
-              &:hover {
-                font-weight: 400;
-
-                @include button-style($deep-orange,35px,165px,$larg-font,$mt-0);
-                padding: 0px;
+          .image { height: 100%; width: 100%; border: none; border-radius: 0px; position: absolute; }
+          .overlay { z-index: 999; opacity: 0; transition: all 1s ease-in-out;
+            .card-body { transition: 0.5s; color: white; background-color: #10B6DD; opacity: 0.9; margin: 20px;
+              .body-heading {
+                cursor: auto;
+                @include font($larg-font,$semi-bold);
+              }
+              .body-heading-lead {
+                cursor: auto;
+                @include font($medium-font,$normal);
+              }
+              .view-more-btn {
+                transition: 0.5s;
+                @include button-style($deep-orange,40px,50%,$medium-font,$mt-0);
+                color: white;
+                &:hover { background-color: #d85b0e; }
+                &:focus { outline: none; box-shadow: none; }
+                &:active { outline: none; box-shadow: none; }
               }
             }
+
+            &:hover { opacity: 1; }
           }
         }
       }
@@ -56,7 +58,38 @@
         .heading-lead { font-size: $medium-font; }
       }
     }
-    .portfolio-content { padding-bottom: 0px; }
+    /*content*/ .portfolio-content { padding-bottom: 50px;
+      .content-row {
+        .content-grid {
+          .content-card { border: none; height: 100%; border-radius: 0px;
+            .image { height: 100%; width: 100%; border: none; border-radius: 0px; position: absolute; }
+            .overlay { z-index: 999; opacity: 0; transition: all 1s ease-in-out;
+              .card-body { transition: 0.5s; color: white; background-color: #10B6DD; opacity: 0.9; margin: 20px;padding:10px!important;
+                .body-heading {
+                  cursor: auto;
+                  @include font($medium-font,$semi-bold);
+                }
+                .body-heading-lead {
+                  cursor: auto;
+                  @include font($small-font,$normal);
+                }
+                .view-more-btn {
+                  transition: 0.5s;
+                 
+                  @include button-style($deep-orange,30px,auto,10px,$mt-0);
+                  color: white;
+                  &:hover { background-color: #d85b0e; }
+                  &:focus { outline: none; box-shadow: none; }
+                  &:active { outline: none; box-shadow: none; }
+                }
+              }
+
+              &:hover { opacity: 1; }
+            }
+          }
+        }
+      }
+    }
   }
   }
 
@@ -77,11 +110,4 @@
 
 
 /*-----------overlay----------*/
-.overlay { opacity: 1; transition: 1s;
-  .card-body { opacity: 0; }
-  &:hover { cursor: pointer;
-    .card-body { opacity: 1;
-     
-    }
-  }
-}
+
