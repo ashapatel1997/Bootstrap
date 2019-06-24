@@ -1,8 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
 
+
+/*mixins command variable import*/
+/*@import 'app/styles/mixins & variables/_mixins.scss';
+@import 'app/styles/mixins & variables/_variables.scss';*/
+
+
 /*font-family:Open Sans*/
 @import url(//fonts.googleapis.com/css?family=Open+Sans);
-body { font-family: 'Open Sans', sans-serif;color:#373737; }
 
+body { font-family: 'Open Sans', sans-serif;color:#373737; }
 html { scroll-behavior: smooth; }
+
 

@@ -1,72 +1,22 @@
 /*common class import*/
 @import '../common-class/common.scss';
 
-/*section-2 (ABOUT)*/
-.about-section { 
-  .about-section-header {
-    .header-content { margin-top: $mt-50;
-      .heading {
-        color: $deep-orange;
 
-        @include font($extra-large-font,$semi-bold);
-      }
-      .heading-lead {
-        @include font($larg-font,$normal);
-      }
-    }
-  }
-  .about-section-content { margin-bottom: $mb-50;
-    .content-img {
-
-      img { height: 100%; }
-    }
-    .content-data {
-      .content-data-heading {
-        @include font(18px,$normal);
-      }
-      ul { padding: 25px;
-        li { font-size: $medium-font; }
-      }
-    }
-  }
-}
 
 
 
 /*maximum screen width 767px*/
-@media only screen and (max-width:767px) { /*-----------section-2 (ABOUT)-------------*/
-  .about-section {
-    .about-section-header {
-      .header-content { margin-top: $mt-30;
-        .heading { font-size: 40px; }
-        .heading-lead { font-size: $medium-font; }
-      }
-    }
-    .about-section-content { margin-bottom: $mb-0; }
-  }
+@media only screen and (max-width:768px) {
+
+  
+    
   }
 
 /*maximum screen width 425px*/
 @media only screen and (max-width:425px) {
-  /*-----------section-2 (ABOUT)-------------*/
-  .about-section {
-    .about-section-header {
 
-      .header-content {
-        .heading { font-size: $larg-font; }
-        .heading-lead { font-size: $extra-small-font; }
-      }
-    }
-    .about-section-content {
-     
-      .content-data {
-        .content-data-heading { font-size: 13px;  }
-        ul { padding: 10px 0px 10px 15px;
-          li { font-size: $extra-small-font; }
-        }
-      }
-    }
-  }
+
+ 
 }
 
 
