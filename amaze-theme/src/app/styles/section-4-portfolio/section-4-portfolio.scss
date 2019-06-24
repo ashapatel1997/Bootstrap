@@ -63,25 +63,24 @@
         .heading-lead { font-size: $medium-font; }
       }
     }
-    /*content*/ .portfolio-content { 
+    /*content*/ .portfolio-content {
       .content-row {
         .content-grid {
-          .content-card { 
+          .content-card {
             .image { }
             .overlay {
-              .card-body { padding:10px!important;
+              .card-body { padding: 10px !important;
                 .body-heading {
-                
+
                   @include font($medium-font,$semi-bold);
                 }
                 .body-heading-lead {
-              
+                  padding-bottom: 0px !important;
                   @include font($small-font,$normal);
                 }
                 .view-more-btn {
                   transition: 0.5s;
                   @include button-style($deep-orange,30px,auto,10px,$mt-0);
-                
                 }
               }
             }
