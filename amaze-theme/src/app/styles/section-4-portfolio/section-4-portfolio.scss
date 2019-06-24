@@ -63,33 +63,27 @@
         .heading-lead { font-size: $medium-font; }
       }
     }
-    /*content*/ .portfolio-content { padding-bottom: 50px;
+    /*content*/ .portfolio-content { 
       .content-row {
         .content-grid {
-          .content-card { border: none; height: 100%; border-radius: 0px;
-            .image { height: 100%; width: 100%; border: none; border-radius: 0px; position: absolute; }
-            .overlay { z-index: 999; opacity: 0; transition: all 1s ease-in-out;
-              .card-body { transition: 0.5s; color: white; background-color: #10B6DD; opacity: 0.9; margin: 20px;padding:10px!important;
+          .content-card { 
+            .image { }
+            .overlay {
+              .card-body { padding:10px!important;
                 .body-heading {
-                  cursor: auto;
+                
                   @include font($medium-font,$semi-bold);
                 }
                 .body-heading-lead {
-                  cursor: auto;
+              
                   @include font($small-font,$normal);
                 }
                 .view-more-btn {
                   transition: 0.5s;
-                 
                   @include button-style($deep-orange,30px,auto,10px,$mt-0);
-                  color: white;
-                  &:hover { background-color: #d85b0e; }
-                  &:focus { outline: none; box-shadow: none; }
-                  &:active { outline: none; box-shadow: none; }
+                
                 }
               }
-
-              &:hover { opacity: 1; }
             }
           }
         }
@@ -114,5 +108,5 @@
 
 
 
-/*-----------overlay----------*/
+
 
