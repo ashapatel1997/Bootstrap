@@ -20,6 +20,11 @@
 }
 
 
+/*active class applies to the active link*/
+.active-link { color: $deep-orange!important; border-bottom: 4px solid $deep-orange; }
+
+
+
 ::placeholder { color: white; }
 
 

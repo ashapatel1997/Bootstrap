@@ -2,11 +2,12 @@
 @import '../common-class/common.scss';
 
 /*section-2 (ABOUT)*/
-.about-section {
+.about-section { 
   .about-section-header {
     .header-content { margin-top: $mt-50;
       .heading {
         color: $deep-orange;
+
         @include font($extra-large-font,$semi-bold);
       }
       .heading-lead {
@@ -14,7 +15,7 @@
       }
     }
   }
-  .about-section-content {margin-bottom:$mb-50;
+  .about-section-content { margin-bottom: $mb-50;
     .content-img {
 
       img { height: 100%; }
@@ -67,3 +68,6 @@
     }
   }
 }
+
+
+

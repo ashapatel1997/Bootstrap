@@ -5,9 +5,8 @@
     "\\src\\app",
     "\\src\\app\\styles",
     "\\src\\app\\styles\\common-class",
-    "\\src\\app\\styles\\section-1-home",
-    "\\src\\app\\styles\\section-4-portfolio"
+    "\\src\\assets"
   ],
-  "SelectedNode": "\\src\\app\\styles\\section-4-portfolio\\section-4-portfolio.scss",
+  "SelectedNode": "\\src\\app\\app.component.html",
   "PreviewInSolutionExplorer": false
 }

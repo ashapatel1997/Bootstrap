@@ -23,7 +23,9 @@ export class AppComponent implements OnInit {
 
   /**instance of the menuItem interface */
   menuItems: menuItem[];
-  
+
+  /*get selected item from menu*/
+  selectedItem;
   /** called after Angular has initialized all data-bound properties of a directive. */
   ngOnInit()
   {
@@ -40,6 +42,16 @@ export class AppComponent implements OnInit {
 
    
   }
-  
+  clicked: boolean = false;
 
+  /**
+   * function call when click on menu item
+   * @param event for click event handler
+   * @param item is selected menu item
+   */
+  listClick(event, item) {
+    this.selectedItem = item.value;
+  }
+
+ 
 }

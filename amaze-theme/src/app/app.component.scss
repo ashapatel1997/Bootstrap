@@ -28,6 +28,7 @@
       li {
         a { color: $text-color;
           &:hover { color: $deep-orange; border-bottom: 4px solid $deep-orange; }
+          
         }
       }
     }

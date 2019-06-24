@@ -6,8 +6,8 @@
 
 /*header*/
 .pricing-section {
-  .pricing-section-header { margin-top: $mt-50;
-    .header-content {
+  .pricing-section-header {
+    .header-content { margin-top: $mt-50;
       .heading {
         color: $deep-orange;
         @include font($extra-large-font,$semi-bold);
@@ -60,8 +60,8 @@
 /*maximum screen width 767px*/
 @media only screen and (max-width:767px) {
 
-  .pricing-section { /*header*/ .pricing-section-header { margin-top: $mt-30;
-      .header-content {
+  .pricing-section { /*header*/ .pricing-section-header {
+      .header-content { margin-top: $mt-30;
         .heading { font-size: 40px; }
         .heading-lead { font-size: $medium-font; }
       }
