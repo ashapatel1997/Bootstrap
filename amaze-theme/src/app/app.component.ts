@@ -12,13 +12,13 @@ interface menuItem
 }
 
 
-
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
+
 export class AppComponent implements OnInit {
 
   /**instance of the menuItem interface */
@@ -26,6 +26,7 @@ export class AppComponent implements OnInit {
 
   /*get selected item from menu*/
   selectedItem;
+
   /** called after Angular has initialized all data-bound properties of a directive. */
   ngOnInit()
   {
@@ -42,7 +43,7 @@ export class AppComponent implements OnInit {
 
    
   }
-  clicked: boolean = false;
+  
 
   /**
    * function call when click on menu item
