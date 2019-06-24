@@ -18,10 +18,10 @@
   /*content*/ .portfolio-content { padding-bottom: 50px;
     .content-row {
       .content-grid {
-        .content-card { border: none; height: 100%; border-radius: 0px;
+        .content-card { border: none; height: 100%; border-radius: 0px; cursor: pointer;
           .image { height: 100%; width: 100%; border: none; border-radius: 0px; position: absolute; }
           .overlay { z-index: 999; opacity: 0; transition: all 1s ease-in-out;
-            .card-body { transition: 0.5s; color: white; background-color: #10B6DD; opacity: 0.9; margin: 20px;
+            .card-body { color: white; background-color: #10B6DD; opacity: 0.9; margin: 20px;
               .body-heading {
                 cursor: auto;
                 @include font($larg-font,$semi-bold);
@@ -35,17 +35,18 @@
                 @include font($medium-font,$normal);
               }
               .view-more-btn {
-                transition: 0.5s;
+
                 @include button-style($deep-orange,40px,50%,$medium-font,$mt-0);
                 color: white;
+
                 &:hover { background-color: #d85b0e; }
                 &:focus { outline: none; box-shadow: none; }
                 &:active { outline: none; box-shadow: none; }
               }
-             
             }
-
-            &:hover { opacity: 1; }
+            animation: rotate-reverse-section 2s 1 forwards; }
+          &:hover {
+            .overlay { opacity: 1; animation: rotate-section 2s 1 forwards; }
           }
         }
       }
@@ -109,3 +110,20 @@
 
 
 
+@keyframes rotate-section{
+  0%{
+    transform:rotate(0deg) scale(0,0);
+    
+    
+  }
+
+  100% { transform: rotate(360deg) scale(1,1); }
+ 
+}
+
+
+@keyframes rotate-reverse-section{
+  0% { transform: rotate(360deg) scale(1,1); }
+
+  100% { transform: rotate(0deg) scale(0,0); }
+}
