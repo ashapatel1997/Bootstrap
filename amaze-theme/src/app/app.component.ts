@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   menuItems: menuItem[];
 
   /*get selected item from menu*/
-  selectedItem;
+  selectedItem: string="home";
 
   /** called after Angular has initialized all data-bound properties of a directive. */
   ngOnInit()
