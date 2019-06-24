@@ -29,7 +29,7 @@
       <div class="collapse navbar-collapse" id="navBar">
         <ul class="navbar-nav">
           <!--menu list items-->
-          <li class="nav-item" *ngFor="let item of menuItems;">
+          <li class="nav-item" *ngFor="let item of menuItems;" data-toggle="collapse" data-target=".navbar-collapse.show">
             <a class="nav-link" href="#{{item.value}}" [ngClass]="{'active-link': selectedItem == item.value}"    (click)="listClick($event, item)" >{{item.name}}</a>
           </li>
         </ul>
