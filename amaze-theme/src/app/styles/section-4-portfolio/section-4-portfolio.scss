@@ -109,32 +109,23 @@
 
 
 
-
+/*portfolio section colck-wise rotation and scale increase with content hover*/
 @keyframes rotate-section{
   0%{
     transform:rotate(0deg) scale(0,0);
-    
-    
   }
 
   100% { transform: rotate(360deg) scale(1,1); }
  
 }
 
-
+/*portfolio section colck-wise rotation and scale decrease when pointer left focus*/
 @keyframes rotate-reverse-section{
   0% { transform: rotate(360deg) scale(1,1); }
 
   100% { transform: rotate(0deg) scale(0,0); }
 }
 
-
-/*@keyframes zoom-out{
-  0% {
-    transform :scale(1,1);
-  }
-  100% { transform: scale(1.01,1.01); }
-}*/
 
 
 
