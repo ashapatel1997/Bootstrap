@@ -1,11 +1,4 @@
-/*styles for home section*/
-/*@import './styles/section-1-home/section-1-home.scss';*/
 
-/*styles for about section*/
-@import './styles/section-2-about/section-2-about.scss';
-
-/*styles for services section*/
-@import './styles/section-3-services/section-3-services.scss';
 
 /*styles for portfolio section*/
 @import './styles/section-4-portfolio/section-4-portfolio.scss';
@@ -110,11 +103,10 @@ ul {
 }
 
 
-
 /*-----------section-2 (ABOUT)-----------*/
 .about-section { background-color: black;
-  .about-section-header {
-    .header-content { margin-top: 80px;
+  .about-section-header { padding-top: 80px;
+    .section-header {
       .section-heading {
         color: $deep-orange;
         margin-bottom: 15px;
@@ -129,16 +121,57 @@ ul {
   }
 }
 
-.about-section-content { padding-bottom: 100px;
+.about-section-content { padding-bottom: 95px;
   .content-img {
-    img { height: 100%; }
+    img { height: 100%;border:none; }
   }
   .content-data {
-    .content-data-heading { 
+    .content-data-heading {
+
       @include font(20px,$semi-bold);
     }
     ul { padding: 20px 0px 0px;
-      li { font-size: $medium-font; padding-bottom: 10px; }
+      li {
+        padding-bottom: 10px;
+        @include font($larg-font,$normal);
+      }
+    }
+  }
+}
+
+
+/*---------section-3 (SERVICES)----------*/
+.services-section { background-color: $light-grey;
+  .services-section-header { padding-top: 80px;
+    .section-header {
+      .section-heading {
+        color: $deep-orange;
+        margin-bottom: 15px;
+        @include font($extra-large-font,$semi-bold);
+      }
+      .section-sub-heading {
+        width: 75%;
+        margin: 0 auto;
+        @include font($larg-font,$normal);
+      }
+    }
+  }
+}
+
+.service-section-content { padding-bottom: 95px; width: 90%;
+
+  .content-grid { padding: 0px 20px;
+    .content-card { background-color: $light-grey; border: none;
+      .card-img-top { border-radius: unset; }
+      .card-body { padding: 40px;
+        .body-heading {
+          @include font($larg-font,$semi-bold);
+        }
+        .body-heading-lead {
+          padding-top: 15px !important;
+          @include font($medium-font,$normal);
+        }
+      }
     }
   }
 }
@@ -146,6 +179,7 @@ ul {
 
 /*-----------------footer------------------*/
 .footer { font-size: $medium-font; }
+
 
 
 /* screen width 768px*/
@@ -157,6 +191,7 @@ ul {
     }
   }
 }
+
 
 
 /*maximum screen width 768px*/
@@ -210,12 +245,59 @@ ul {
   /*-----------section-2 (ABOUT)-------------*/
   .about-section {
     .about-section-header {
-      .header-content {
+      .section-header {
         .section-heading { font-size: 40px; }
         .section-sub-heading { width: 100%; font-size: $medium-font; }
       }
     }
   }
+
+  .about-section-content { 
+    .content-data { 
+      ul { padding: 20px 0px 0px 15px;
+        li { font-size: $medium-font;   }
+      }
+    }
+  }
+
+
+  /*-----------section-3 (SERVICES)-------------*/
+  .services-section {
+
+    .services-section-header {
+      .section-header {
+        .section-heading {
+          color: $deep-orange;
+          margin-bottom: 15px;
+          @include font(40px,$semi-bold);
+        }
+        .section-sub-heading {
+          width: 100%;
+
+          @include font($medium-font,$normal);
+        }
+      }
+    }
+  }
+
+  .service-section-content { width: 95%;
+
+    .content-grid { padding: 0px 15px;
+      .content-card {
+        .card-img-top { }
+        .card-body {
+          .body-heading {
+            @include font($medium-font,$semi-bold);
+          }
+          .body-heading-lead {
+            padding-top: 15px !important;
+            @include font($small-font,$normal);
+          }
+        }
+      }
+    }
+  }
+
 }
 
 
@@ -281,22 +363,58 @@ ul {
 
   /*-----------section-2 (ABOUT)-------------*/
   .about-section {
-    .about-section-header {
-      .header-content {
+    .about-section-header { padding-top: 50px;
+      .section-header {
         .section-heading { font-size: $larg-font; }
         .section-sub-heading { padding: 10px !important; font-size: $extra-small-font; }
       }
     }
   }
 
-  .about-section-content {
-    .content-data { margin-top: 20px;
+  .about-section-content {padding-bottom:35px ;
+    .content-data { margin-top: 0px;
       .content-data-heading { font-size: 13px; }
       ul { padding: 10px 0px 10px 15px;
         li { font-size: $extra-small-font; }
       }
     }
   }
+
+
+  /*-----------section-3 (SERVICES)-------------*/
+  .services-section {
+
+    .services-section-header { padding-top: 50px;
+      .section-header {
+        .section-heading {
+          @include font($larg-font,$semi-bold);
+        }
+        .section-sub-heading {
+          padding: 10px !important;
+          @include font($extra-small-font,$normal);
+        }
+      }
+    }
+  }
+
+  .service-section-content { width: 95%; padding-bottom: 35px;
+
+    .content-grid { padding: 0px 15px;
+      .content-card {
+        .card-img-top { }
+        .card-body { padding: 20px;
+          .body-heading {
+            @include font($small-font,$semi-bold);
+          }
+          .body-heading-lead {
+            padding-top: 5px !important;
+            @include font($extra-small-font,$normal);
+          }
+        }
+      }
+    }
+  }
+
 
   /*----------footer--------------*/
   .footer { font-size: $small-font; }
