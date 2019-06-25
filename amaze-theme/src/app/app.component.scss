@@ -1,7 +1,7 @@
 
 
 /*styles for portfolio section*/
-@import './styles/section-4-portfolio/section-4-portfolio.scss';
+/*@import './styles/section-4-portfolio/section-4-portfolio.scss';*/
 
 /*styles for team section*/
 @import './styles/section-5-team/section-5-team.scss';
@@ -106,7 +106,7 @@ ul {
 /*-----------section-2 (ABOUT)-----------*/
 .about-section { background-color: black;
   .about-section-header { padding-top: 80px;
-    .section-header {
+    .section-header-content {
       .section-heading {
         color: $deep-orange;
         margin-bottom: 15px;
@@ -143,7 +143,7 @@ ul {
 /*---------section-3 (SERVICES)----------*/
 .services-section { background-color: $light-grey;
   .services-section-header { padding-top: 80px;
-    .section-header {
+    .section-header-content {
       .section-heading {
         color: $deep-orange;
         margin-bottom: 15px;
@@ -175,6 +175,70 @@ ul {
     }
   }
 }
+
+
+/*---------section-4 (PORTFOLIO)----------*/
+.portfolio-section { background-color: #000000;
+  .portfolio-section-header { padding-top: 80px;
+    .section-header-content {
+      .section-heading {
+        color: $deep-orange;
+        margin-bottom: 15px;
+        @include font($extra-large-font,$semi-bold);
+      }
+      .section-sub-heading {
+        color: white;
+        width: 75%;
+        margin: 0 auto;
+        @include font($larg-font,$normal);
+      }
+    }
+  }
+}
+
+.portfolio-section-content { padding-bottom: 95px; width: 90%;
+  .content-grid { margin-bottom: 30px; padding: 0px 15px;
+    .content-card { border: none; height: 100%; border-radius: 0px; cursor: pointer; transition: all 1s ease-in-out;
+      .image { height: 100%; width: 100%; border: none; border-radius: 0px; position: absolute; }
+      &:hover { box-shadow: 0px 0px 20px #f2f2f2; transform: scale(1.01);
+        .overlay { opacity: 1; animation: rotate-portfolio-description 2s 1 forwards,; }
+      }
+    }
+  }
+}
+
+.overlay { z-index: 999; opacity: 0; transition: all 1s ease-in-out;
+  .card-body { opacity: 0.9; margin: 25px;
+    .body-heading {
+      cursor: auto;
+      @include font($larg-font,$semi-bold);
+
+      .fa-star-half-o {
+        @include font($extra-large-font,$semi-bold);
+      }
+    }
+    .body-heading-lead {
+      cursor: auto;
+      @include font($medium-font,$normal);
+    }
+    ul { margin: 0 auto;
+      li { margin: 5px !important; }
+    }
+    .view-more-btn {
+
+      @include button-style($deep-orange,40px,90%,$medium-font,$mt-0);
+      color: white;
+
+      &:hover { background-color: #d85b0e; }
+      &:focus { outline: none; box-shadow: none; }
+      &:active { outline: none; box-shadow: none; }
+    }
+  }
+  animation: rotate-reverse-portfolio-description 2s 1 forwards
+
+}
+
+
 
 
 /*-----------------footer------------------*/
@@ -245,7 +309,7 @@ ul {
   /*-----------section-2 (ABOUT)-------------*/
   .about-section {
     .about-section-header {
-      .section-header {
+      .section-header-content {
         .section-heading { font-size: 40px; }
         .section-sub-heading { width: 100%; font-size: $medium-font; }
       }
@@ -265,7 +329,7 @@ ul {
   .services-section {
 
     .services-section-header {
-      .section-header {
+      .section-header-content {
         .section-heading {
           color: $deep-orange;
           margin-bottom: 15px;
@@ -297,6 +361,38 @@ ul {
       }
     }
   }
+
+
+  /*-----------section-4 (PORTFOLIO)-------------*/
+  .portfolio-section {
+    .portfolio-section-header {
+      .section-header-content {
+        .section-heading { font-size: 40px; }
+        .section-sub-heading { width: 100%; font-size: $medium-font; }
+      }
+    }
+  }
+
+  .portfolio-section-content { width:95%;
+    .content-grid { margin-bottom: 30px;}
+  }
+
+  .overlay {
+    .card-body { padding: 10px !important;
+      .body-heading {
+
+        @include font($medium-font,$semi-bold);
+      }
+      .body-heading-lead {
+        padding-bottom: 0px !important;
+        @include font($small-font,$normal);
+      }
+      .view-more-btn {
+        @include button-style($deep-orange,30px,auto,10px,$mt-0);
+      }
+    }
+  }
+
 
 }
 
@@ -364,7 +460,7 @@ ul {
   /*-----------section-2 (ABOUT)-------------*/
   .about-section {
     .about-section-header { padding-top: 50px;
-      .section-header {
+      .section-header-content {
         .section-heading { font-size: $larg-font; }
         .section-sub-heading { padding: 10px !important; font-size: $extra-small-font; }
       }
@@ -385,7 +481,7 @@ ul {
   .services-section {
 
     .services-section-header { padding-top: 50px;
-      .section-header {
+      .section-header-content {
         .section-heading {
           @include font($larg-font,$semi-bold);
         }
@@ -418,7 +514,46 @@ ul {
 
   /*----------footer--------------*/
   .footer { font-size: $small-font; }
-}
+
+
+  /*-----------section-4 (PORTFOLIO)-------------*/
+  .portfolio-section {
+    .portfolio-section-header { padding-top: 50px;
+      .section-header-content {
+        .section-heading { font-size: $larg-font; }
+        .section-sub-heading { padding: 10px !important; font-size: $extra-small-font; }
+      }
+    }
+  }
+
+  .portfolio-section-content { padding-bottom: 35px;
+    .content-grid { margin-bottom: 20px;  }
+  }
+
+
+  .overlay {
+    .card-body { padding: 10px !important; margin: 10px;
+      .body-heading {
+
+        @include font($extra-small-font,$semi-bold);
+      }
+      .body-heading-lead {
+        padding-bottom: 0px !important;
+        padding-top: 10px !important;
+        @include font($extra-small-font,$normal);
+      }
+      ul { 
+        li { font-size:13px;}
+      }
+      .view-more-btn {
+        transition: 0.5s;
+        padding: 5px 5px 20px 5px;
+
+        @include button-style($deep-orange,20px,auto,10px,0px);
+      }
+    }
+  }
+  }
 
 
 

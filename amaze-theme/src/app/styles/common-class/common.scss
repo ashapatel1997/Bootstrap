@@ -6,9 +6,16 @@
 
 /*text and background color*/
 .text-deep-orange { color: $deep-orange; }
+.text-black { color:black;}
+.text-white{color:white;}
+
 .bg-deep-orange { background-color: $deep-orange; }
 .bg-black { background-color:black;}
-
+.bg-light-blue { background-color: #10B6DD ;}
+.bg-light-yellow { background-color: #ffffcc ;}
+.bg-blue { background-color: #141a46 ;}
+.bg-white{background-color:white;}
+.bg-pink { background-color: #ccccff; }
 /*app header background*/
 .header-background { background-color: #10B6DD; box-shadow: 5px 5px 20px grey; }
 
@@ -29,4 +36,22 @@
 ::placeholder { color: white; }
 
 
+
+/*portfolio section colck-wise rotation and scale increase with content hover*/
+@keyframes rotate-portfolio-description {
+  0% { transform: rotate(0deg) scale(0,0); }
+
+  30% { transform: rotate(360deg) scale(0.5,0.5); }
+
+  100% { transform: scale(1,1); }
+}
+
+/*portfolio section colck-wise rotation and scale decrease when pointer left focus*/
+@keyframes rotate-reverse-portfolio-description {
+  0% { transform: scale(1,1); }
+
+  30% { transform: rotate(0deg) scale(0.5,0.5); }
+
+  100% { transform: rotate(360deg) scale(0,0); }
+}
 
