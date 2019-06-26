@@ -29,10 +29,12 @@ export class AppComponent implements OnInit {
   //boolean value false for scroll offset <=10 
   scrolled: boolean = false;
 
-  //scroll listner
-  /*show scroll button if y offset is > 10*/
+  //host listner for window scrolling event
   @HostListener('window:scroll')
+
+   /*check scroll position*/
   checkScroll() {
+
     //get scroll position
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
@@ -45,8 +47,6 @@ export class AppComponent implements OnInit {
       this.scrolled = false;
     }
   }
-
-
 
   /** called after Angular has initialized all data-bound properties of a directive. */
   ngOnInit()
@@ -62,8 +62,6 @@ export class AppComponent implements OnInit {
       { id: 6, name: "pricing" },
       { id: 7, name: "contact" }
       ];
-
-    
   }
 
   /**
