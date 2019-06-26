@@ -26,16 +26,18 @@ export class AppComponent implements OnInit {
   //get selected item from menu
   selectedItem: string="home";
 
+  //boolean value false for scroll offset <=10 
   scrolled: boolean = false;
+
   //scroll listner
-  /*show scroll button if y offset is >= 100*/
+  /*show scroll button if y offset is > 10*/
   @HostListener('window:scroll')
   checkScroll() {
-
-   
-
+    //get scroll position
     const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
 
+    /*if scroll position > 10 then scrolled = true,
+     & apply class to change header background color*/
 
     if (scrollPosition > 10) {
       this.scrolled = true;
@@ -61,13 +63,7 @@ export class AppComponent implements OnInit {
       { id: 7, name: "contact" }
       ];
 
-    this.onWindowScroll();
-  }
-
-  //get scroll offset
-  onWindowScroll() {
-    const scrollOffset = window.pageYOffset;
-    console.log(scrollOffset);
+    
   }
 
   /**
