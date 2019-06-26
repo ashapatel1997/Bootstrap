@@ -1,6 +1,6 @@
 @import 'variables';
 
-/*--------------mixins--------------------*/
+/*--------------Mixins--------------------*/
 
 /*mixin for slider banner backgound*/
 @mixin slider-banner-background($src) { background: url($src); background-attachment: fixed;  background-repeat: no-repeat; background-size: cover; height: 100vh; }
@@ -17,3 +17,25 @@
 /*mixin form button styles*/
 
 @mixin button-style($bg,$height, $width,$font-size, $mt) { background-color: $bg; height: $height; width: $width; font-size: $font-size; margin-top: $mt }
+
+
+
+/*------------Animation------------*/
+
+/*portfolio section colck-wise rotation and scale increase with content hover*/
+@keyframes rotate-portfolio-description {
+  0% { transform: rotate(0deg) scale(0,0); }
+
+  30% { transform: rotate(360deg) scale(0.5,0.5); }
+
+  100% { transform: scale(1,1); }
+}
+
+/*portfolio section colck-wise rotation and scale decrease when pointer left focus*/
+@keyframes rotate-reverse-portfolio-description {
+  0% { transform: scale(1,1); }
+
+  30% { transform: rotate(0deg) scale(0.5,0.5); }
+
+  100% { transform: rotate(360deg) scale(0,0); }
+}

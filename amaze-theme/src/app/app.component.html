@@ -1,613 +1,671 @@
 
 
+<!-- header -->
+<header class="app-header d-flex  fixed-top " [ngClass]="{'header-background':scrolled==true}">
 
-  <!-- header -->
-  <header class="app-header d-flex  fixed-top " [ngClass]="{'header-background':scrolled==true}">
+  <!--header logo-->
+  <div class="app-header-logo text-deep-orange font-weight-bold   my-auto">AMAZE</div>
 
-    <!--header logo-->
-    <div class="app-header-logo text-deep-orange font-weight-bold   my-auto" >AMAZE</div>
+  <!--header menu-->
+  <nav class="app-header-navbar  navbar navbar-expand-md ml-auto " id="nav-menu">
 
-    <!--header menu-->
-    <nav class="app-header-navbar  navbar navbar-expand-md ml-auto " id="nav-menu">
+    <!-- toggle button-->
+    <button class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#navBar" aria-expanded="false">
+      <i class="fa fa-bars menu-icon" aria-hidden="true"></i>
+    </button>
 
-      <!-- toggle button-->
-      <button class="navbar-toggler ml-auto" data-toggle="collapse"  data-target="#navBar" aria-expanded="false">
-        <i class="fa fa-bars menu-icon"  aria-hidden="true"></i>
-      </button>
-
-      <!--menu list-->
-      <div class="collapse navbar-collapse " id="navBar">
-        <ul class="navbar-nav ">
-          <!--menu list items-->
-          <li class="nav-item  " *ngFor="let item of menuItems;" data-toggle="collapse" data-target=".navbar-collapse.show">
-            <a class="nav-link p-0 text-uppercase" href="#{{item.name}}" [ngClass]="{'active-link': selectedItem == item.name }"    (click)="listClick($event, item)" >{{item.name}}</a>
-          </li>
-        </ul>
-      </div>
-
-    </nav>
-
-
-  </header>
-
-  <!--section 1 (HOME)-->
-  <section class="carousel slide home-section" data-ride="carousel" id="home" data-interval="5000">
-
-    <!--slide indicator-->
-    <ol class="carousel-indicators slide-indicators">
-      <li data-target="#home" data-slide-to="0" class="active"></li>
-      <li data-target="#home" data-slide-to="1"></li>
-      <li data-target="#home" data-slide-to="2"></li>
-    </ol>
-
-
-    <div class="carousel-inner home-section-slider">
-
-      <!-- slide 1 -->
-      <div class="slide-1 carousel-item active">
-        <div class="carousel-caption slide-1-caption ">
-          <h1 class="slide-heading text-uppercase"> WE CREATE AMAZING SOFTWARE WITH CARE</h1>
-          <p class="lead slide-sub-heading">We are experts in web, mobile and enterprise solution development</p>
-          <button class="btn text-white text-uppercase">LEARN MORE</button>
-        </div>
-      </div>
-
-      <!-- slide 2 -->
-      <div class="slide-2 carousel-item ">
-        <div class="carousel-caption slide-2-caption ">
-          <h1 class="slide-heading text-uppercase">WE CREATE AMAZING SOFTWARE WITH CARE</h1>
-          <p class="lead slide-sub-heading">We are experts in web, mobile and enterprise solution development</p>
-          <button class="btn text-white text-uppercase">LEARN MORE</button>
-        </div>
-      </div>
-
-      <!-- slide 3 -->
-      <div class="slide-3 carousel-item ">
-        <div class="carousel-caption slide-3-caption ">
-          <h1 class="slide-heading text-uppercase">WE CREATE AMAZING SOFTWARE WITH CARE</h1>
-          <p class="lead slide-sub-heading">We are experts in web, mobile and enterprise solution development</p>
-          <button class="btn text-white text-uppercase">LEARN MORE</button>
-        </div>
-      </div>
-
+    <!--menu list-->
+    <div class="collapse navbar-collapse " id="navBar">
+      <ul class="navbar-nav ">
+        <!--menu list items-->
+        <li class="nav-item  " *ngFor="let item of menuItems;" data-toggle="collapse" data-target=".navbar-collapse.show">
+          <a class="nav-link p-0 text-uppercase" href="#{{item.name}}" [ngClass]="{'active-link': selectedItem == item.name }" (click)="listClick($event, item)">{{item.name}}</a>
+        </li>
+      </ul>
     </div>
 
-  </section>
+  </nav>
 
 
-  <!--section 2 (ABOUT)-->
-  <section class="container-fluid about-section" id="about">
+</header>
 
-    <!--about section header-->
-    <div class="row d-flex about-section-header">
-      <div class="col-12 text-center section-header-content">
-        <h1 class="section-heading text-uppercase">ABOUT AMAZE</h1>
-        <p class="lead px-5 section-sub-heading">
-          Release bandwidth user experience research & development branding termsheet business plan
-          advisor analytics ecosystem entrepreneur
-        </p>
+<!--section 1 (HOME)-->
+<section class="carousel slide home-section" data-ride="carousel" id="home" data-interval="5000">
+
+  <!--slide indicator-->
+  <ol class="carousel-indicators slide-indicators">
+    <li data-target="#home" data-slide-to="0" class="active"></li>
+    <li data-target="#home" data-slide-to="1"></li>
+    <li data-target="#home" data-slide-to="2"></li>
+  </ol>
+
+
+  <div class="carousel-inner home-section-slider">
+
+    <!-- slide 1 -->
+    <div class="slide-1 carousel-item active">
+      <div class="carousel-caption slide-1-caption ">
+        <h1 class="slide-heading text-uppercase"> WE CREATE AMAZING SOFTWARE WITH CARE</h1>
+        <p class="lead slide-sub-heading">We are experts in web, mobile and enterprise solution development</p>
+        <button class="btn text-white text-uppercase">LEARN MORE</button>
       </div>
     </div>
 
-    <!--line saperator-->
-    <div class="border mx-auto d-flex ">
-    </div>
-
-    <!-- about section content -->
-      <div class="container-fluid mx-auto row  about-section-content justify-content-center px-5">
-
-        <div class="col-sm-12 col-md-5 mx-3  px-0 content-img">
-          <img src="../assets/section-2-img.jpg" class="w-100 img" />
-        </div>
-
-        <div class="col-sm-12 col-md-5 mx-3 px-0 content-data pt-4 pt-xs-4 pt-sm-4 pt-md-0 pt-lg-0 pt-xl-0 ">
-          <span class="content-data-heading">Promact is a pinnacle where we believe in staying a step ahead in Technology.</span>
-
-          <!--bullet points of about section-->
-          <ul>
-            <li>
-              Promact is a pinnacle where we believe in staying a step ahead in technology
-            </li>
-            <li>
-              Promact is a pinnacle where we believe in staying a step ahead in technology
-            </li>
-            <li>
-              Promact is a pinnacle where we believe in staying a step ahead in technology
-            </li>
-           
-          </ul>
-
-        </div>
-      </div>
-    
-   
-  </section>
-
-
-  <!-- section 3 (SERVICES) -->
-  <section class="container-fluid services-section" id="services">
-
-    <!--service section header-->
-    <div class="row d-flex services-section-header">
-      <div class="col-12 text-center section-header-content ">
-        <h1 class="section-heading text-uppercase">what WE DO</h1>
-        <p class="lead px-5 section-sub-heading ">
-          Release bandwidth user experience research & development branding termsheet business plan
-          advisor analytics ecosystem entrepreneur
-        </p>
+    <!-- slide 2 -->
+    <div class="slide-2 carousel-item ">
+      <div class="carousel-caption slide-2-caption ">
+        <h1 class="slide-heading text-uppercase">WE CREATE AMAZING SOFTWARE WITH CARE</h1>
+        <p class="lead slide-sub-heading">We are experts in web, mobile and enterprise solution development</p>
+        <button class="btn text-white text-uppercase">LEARN MORE</button>
       </div>
     </div>
 
-    <!--line saperator-->
-    <div class="border mx-auto d-flex ">
-    </div>
-
-    <!-- service section content -->
-      <div class="container-fluid mx-auto row  px-5  service-section-content justify-content-center">
-
-        <!-- service-1 -->
-        <div class="col-md-4 col-sm-6  content-grid ">
-          <div class="card content-card px-0 mx-0 h-100">
-            <img class="card-img-top ml-auto " src="../assets/service-1.jpg" />
-            <div class="card-body px-0 ">
-              <span class="body-heading card-title">WEB DEVELOPMENT</span>
-
-              <p class="card-text body-heading-lead pt-2 ">
-                Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-               
-              </p>
-
-            </div>
-          </div>
-        </div>
-
-        <!-- service-2 -->
-        <div class="col-md-4 col-sm-6   content-grid">
-          <div class="card content-card px-0 mx-0 h-100">
-            <img class="card-img-top ml-auto " src="../assets/service-2.jpg" />
-            <div class="card-body px-0">
-              <span class="body-heading card-title">WEB DEVELOPMENT</span>
-
-              <p class="card-text body-heading-lead pt-2">
-                Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-               
-              </p>
-
-            </div>
-          </div>
-        </div>
-
-        <!-- service-3 -->
-        <div class="col-md-4 col-sm-6  content-grid ">
-          <div class="card content-card px-0 mx-0 h-100">
-            <img class="card-img-top ml-auto " src="../assets/service-3.jpg" />
-            <div class="card-body px-0">
-              <span class="body-heading card-title">WEB DEVELOPMENT</span>
-
-              <p class="card-text body-heading-lead pt-2">
-                Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-                Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
-               
-              </p>
-
-            </div>
-          </div>
-        </div>
-
-
-
-      </div>
-   
-  </section>
-
-
-  <!-- section 4 (PORTFOLIO) -->
-  <section class="container-fluid portfolio-section" id="portfolio">
-
-    <!--portfolio section header-->
-    <div class="row d-flex portfolio-section-header">
-      <div class="col-12 text-center section-header-content">
-        <h1 class="section-heading text-uppercase">OUR WORKS</h1>
-        <p class="lead px-5 section-sub-heading">
-          Release bandwidth user experience research & development branding termsheet business plan
-          advisor analytics ecosystem entrepreneur
-        </p>
+    <!-- slide 3 -->
+    <div class="slide-3 carousel-item ">
+      <div class="carousel-caption slide-3-caption ">
+        <h1 class="slide-heading text-uppercase">WE CREATE AMAZING SOFTWARE WITH CARE</h1>
+        <p class="lead slide-sub-heading">We are experts in web, mobile and enterprise solution development</p>
+        <button class="btn text-white text-uppercase">LEARN MORE</button>
       </div>
     </div>
 
-    <!--line saperator-->
-    <div class="border mx-auto d-flex ">
+  </div>
+
+</section>
+
+
+<!--section 2 (ABOUT)-->
+<section class="container-fluid about-section " id="about">
+
+  <!--about section header-->
+  <div class="row d-flex about-section-header ">
+    <div class="col-12 text-center section-header-content">
+      <h1 class="section-heading text-uppercase">ABOUT AMAZE</h1>
+      <p class="lead px-5 section-sub-heading">
+        Release bandwidth user experience research & development branding termsheet business plan
+        advisor analytics ecosystem entrepreneur
+      </p>
+    </div>
+  </div>
+
+  <!--line saperator-->
+  <div class="border mx-auto d-flex ">
+  </div>
+
+  <!-- about section content -->
+  <div class="container-fluid mx-auto row d-flex about-section-content  px-5">
+
+    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6  content-grid">
+      <img src="../assets/section-2-img.jpg" class="w-100 img" />
     </div>
 
-    <!--portfolio section content -->
-  
-      <div class="container-fluid mx-auto portfolio-section-content row  px-5 row   justify-content-center">
 
-        <!-- work-1 -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4  content-grid">
-          <div class="card text-black content-card px-0 mx-0 ">
-            <img class="image " src="../assets/service-1.jpg" />
-            <div class="overlay">
-              <div class="card-body bg-light-yellow  px-1 py-5 text-center ">
-                <span class="body-heading card-title ">WEB DEVELOPMENT</span>
-                <p class="card-text body-heading-lead pb-4 pt-2">
-                  Some quick example text to build
+    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6  content-grid">
+      <span class="content-data-heading">Promact is a pinnacle where we believe in staying a step ahead in Technology.</span>
+      <ul>
+        <li>
+          Promact is a pinnacle where we believe in staying a step ahead in technology
+        </li>
+        <li>
+          Promact is a pinnacle where we believe in staying a step ahead in technology
+        </li>
+        <li>
+          Promact is a pinnacle where we believe in staying a step ahead in technology
+        </li>
 
-                </p>
-                <button class="btn text-black view-more-btn ">
-                  VIEW MORE
-                </button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-
-        <!-- work-2 -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4   content-grid">
-
-
-          <div class="card content-card px-0 mx-0 ">
-            <img class="image " src="../assets/service-2.jpg" />
-            <div class="overlay">
-              <div class="card-body text-white bg-light-blue  px-1 py-5  text-center ">
-                <span class="body-heading card-title "><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
-                <p class="card-text  body-heading-lead pt-2 font-weight-bold">
-                  Half Star
-                </p>
-                <ul class="list-inline pb-3 ">
-                  <li class="list-inline-item"><a class="text-white ">Love</a></li>
-                  <li class="list-inline-item"><a class="text-white ">Life</a></li>
-                  <li class="list-inline-item"><a class="text-white ">Love</a></li>
-                </ul>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- work-3 -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4  content-grid">
-          <div class="card content-card px-0 mx-0 ">
-            <img class="image " src="../assets/service-3.jpg" />
-            <div class="overlay">
-              <div class="card-body bg-blue text-white  px-1 py-5 text-center ">
-                <span class="body-heading card-title">WEB DEVELOPMENT</span>
-                <p class="card-text body-heading-lead pb-4 pt-2">
-                  Some quick example text to build
-
-                </p>
-                <button class="btn view-more-btn">
-                  VIEW MORE
-                </button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- work-4 -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6   content-grid">
-          <div class="card content-card px-0 mx-0 ">
-            <img class="image " src="../assets/service-4.jpg" />
-            <div class="overlay">
-              <div class="card-body bg-pink  px-1 py-5 text-center ">
-                <span class="body-heading card-title">WEB DEVELOPMENT</span>
-                <p class="card-text body-heading-lead pt-2">
-                  Some quick example text to build
-
-                </p>
-                <button class="btn view-more-btn">
-                  VIEW MORE
-                </button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- work-5 -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6  content-grid">
-          <div class="card content-card px-0 mx-0 ">
-            <img class="image " src="../assets/service-5.jpg" />
-            <div class="overlay">
-              <div class="card-body bg-white   px-1 py-5 text-center ">
-                <span class="body-heading card-title">WEB DEVELOPMENT</span>
-                <p class="card-text body-heading-lead pt-2">
-                  Some quick example text to build
-
-                </p>
-                <button class="btn view-more-btn">
-                  VIEW MORE
-                </button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- work-6 -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4  content-grid">
-          <div class="card content-card px-0 mx-0 ">
-            <img class="image " src="../assets/service-6.jpg" />
-            <div class="overlay">
-              <div class="card-body bg-light-yellow text-black  px-1 py-5 text-center ">
-                <span class="body-heading card-title">WEB DEVELOPMENT</span>
-                <p class="card-text body-heading-lead pt-2">
-                  Some quick example text to build
-
-                </p>
-                <button class="btn  view-more-btn">
-                  VIEW MORE
-                </button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-
-        <!-- work-7 -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4  content-grid">
-          <div class="card content-card px-0 mx-0 ">
-            <img class="image " src="../assets/service-7.jpg" />
-            <div class="overlay">
-              <div class="card-body bg-light-blue text-white  px-1 py-5 text-center ">
-                <span class="body-heading card-title">WEB DEVELOPMENT</span>
-                <p class="card-text body-heading-lead pt-2">
-                  Some quick example text to build
-
-                </p>
-                <button class="btn view-more-btn">
-                  VIEW MORE
-                </button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-        <!-- work-8 -->
-        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4  content-grid">
-          <div class="card content-card px-0 mx-0 ">
-            <img class="image " src="../assets/service-8.jpg" />
-            <div class="overlay">
-              <div class="card-body  bg-blue text-white px-1 py-5 text-center ">
-                <span class="body-heading card-title">WEB DEVELOPMENT</span>
-                <p class="card-text body-heading-lead pt-2">
-                  Some quick example text to build
-
-                </p>
-                <button class="btn view-more-btn">
-                  VIEW MORE
-                </button>
-              </div>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-
-    
-
-  </section>
-
-
-  <!-- section 5 (TEAM) -->
-  <div class="container-fluid team-section" id="team">
-    <!--header-->
-    <div class="row d-flex team-section-header">
-      <div class="col-12 text-center header-content">
-        <h1 class="heading">THE TEAM</h1>
-        <p class="lead px-5 heading-lead">
-          We do everything with out core values of honesty, hard work and trust
-        </p>
-      </div>
-    </div>
-
-    <!--dash-->
-    <div class="border mx-auto d-flex ">
-    </div>
-
-    <!-- content -->
-    <div class="container team-content">
-      <div class="row d-flex content-row mx-0 mx-sm-5 p-4 p-sm-4">
-
-        <!-- member-1 -->
-        <div class="col-md-3 col-sm-6  content-grid my-2">
-          <div class="card content-card">
-            <img class="card-img-top team-member-img " src="../assets/service-1.jpg" />
-            <div class="card-body  ">
-              <h1 class="card-title member-name">NAME</h1>
-              <h4 class="card-subtitle member-designation">Designation</h4>
-              <p class="card-text member-description">
-                Some quick example text to build on the
-                card title and make up the bulk of the card's content.
-              </p>
-              <button class="btn  member-view-profile-button">VIEW PROFILE</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- member-2 -->
-        <div class="col-md-3 col-sm-6  content-grid my-2">
-          <div class="card content-card">
-            <img class="card-img-top team-member-img " src="../assets/service-1.jpg" />
-            <div class="card-body  ">
-              <h1 class="card-title member-name">NAME</h1>
-              <h4 class="card-subtitle member-designation">Designation</h4>
-              <p class="card-text member-description">
-                Some quick example text to build on the
-                card title and make up the bulk of the card's content.
-              </p>
-              <button class="btn  member-view-profile-button">VIEW PROFILE</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- member-3 -->
-        <div class="col-md-3 col-sm-6 content-grid my-2">
-          <div class="card content-card">
-            <img class="card-img-top team-member-img " src="../assets/service-1.jpg" />
-            <div class="card-body  ">
-              <h1 class="card-title member-name">NAME</h1>
-              <h4 class="card-subtitle member-designation">Designation</h4>
-              <p class="card-text member-description">
-                Some quick example text to build on the
-                card title and make up the bulk of the card's content.
-              </p>
-              <button class="btn  member-view-profile-button">VIEW PROFILE</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- member-4 -->
-        <div class="col-md-3 col-sm-6 content-grid my-2">
-          <div class="card content-card">
-            <img class="card-img-top team-member-img " src="../assets/service-1.jpg" />
-            <div class="card-body  ">
-              <h1 class="card-title member-name">NAME</h1>
-              <h4 class="card-subtitle member-designation">Designation</h4>
-              <p class="card-text member-description">
-                Some quick example text to build on the
-                card title and make up the bulk of the card's content.
-              </p>
-              <button class="btn  member-view-profile-button">VIEW PROFILE</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
+      </ul>
     </div>
 
 
   </div>
 
 
-  <!-- section 6 (PRICING) -->
-  <div class="container-fluid pricing-section" id="pricing">
 
-    <!--header-->
-    <div class="row d-flex pricing-section-header ">
-      <div class="col-12 text-center header-content">
-        <h1 class="heading">PRICING</h1>
-        <p class="lead px-5 heading-lead">
-          Our built-in payment system allows your merchants to accept both paypal and
-          all of major credit cards
-        </p>
-      </div>
-    </div>
-
-    <!--dash-->
-    <div class="border mx-auto d-flex ">
-    </div>
-
-    <!-- content -->
-    <div class="container pricing-content ">
-      <div class="row d-flex plan-content-row  justify-content-around p-4 ">
-        <!--Starter plan-->
-        <div class="col-md-3 plan-content-grid ml-md-5 my-2 mx-3 mx-md-0">
-          <div class="row d-flex text-center plan-content-inner-row ">
-            <div class="col-12 border-bottom py-3 plan-type-grid ">
-              <span class="plan-type-name">Starter</span>
-            </div>
-            <div class="col-12 border-bottom py-3 plan-price-grid">
-              <span class="plan-price-value"> <sup>$</sup> 6</span>
-            </div>
-            <div class="col-12 border-bottom py-2 plan-support-grid">
-              <span class="plan-support-time"> 6 Months Support</span>
-            </div>
-            <div class="col-12 pt-2 pb-3 plan-buy-grid ">
-              <span class="plan-buy-domain">  1 domain</span>
-              <button class="btn d-block mx-auto mt-4 plan-buy-btn">BUY NOW</button>
-            </div>
-          </div>
-        </div>
+</section>
 
 
-        <!--Business plan-->
-        <div class="col-md-4 plan-content-grid my-2 mx-3 mx-md-0">
-          <div class="row d-flex text-center plan-content-inner-row ">
-            <div class="col-12 border-bottom py-3 plan-type-grid ">
-              <span class="plan-type-name">Business</span>
+<!-- section 3 (SERVICES) -->
+<section class="container-fluid services-section" id="services">
 
-            </div>
-            <div class="col-12 border-bottom py-3 plan-price-grid">
-              <span class="plan-price-value"> <sup>$</sup> 21</span>
-            </div>
-            <div class="col-12 border-bottom py-2 plan-support-grid">
-              <span class="plan-support-time"> 6 Months Support</span>
-            </div>
-            <div class="col-12 pt-2 pb-3 plan-buy-grid ">
-              <span class="plan-buy-domain">  1 domain</span>
-              <button class="btn d-block mx-auto mt-4 plan-buy-btn">BUY NOW</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Advance plan -->
-        <div class="col-md-3 plan-content-grid mr-md-5 my-2 mx-3 mx-md-0">
-          <div class="row d-flex text-center plan-content-inner-row ">
-            <div class="col-12 border-bottom py-3 plan-type-grid ">
-              <span class="plan-type-name">Advanced</span>
-            </div>
-            <div class="col-12 border-bottom py-3 plan-price-grid">
-              <span class="plan-price-value"> <sup>$</sup> 48</span>
-            </div>
-            <div class="col-12 border-bottom py-2 plan-support-grid">
-              <span class="plan-support-time"> 6 Months Support</span>
-            </div>
-            <div class="col-12 pt-2 pb-3 plan-buy-grid ">
-              <span class="plan-buy-domain">  1 domain</span>
-              <button class="btn d-block mx-auto mt-4 plan-buy-btn">BUY NOW</button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
+  <!--service section header-->
+  <div class="row d-flex services-section-header">
+    <div class="col-12 text-center section-header-content ">
+      <h1 class="section-heading text-uppercase">what WE DO</h1>
+      <p class="lead px-5 section-sub-heading ">
+        Release bandwidth user experience research & development branding termsheet business plan
+        advisor analytics ecosystem entrepreneur
+      </p>
     </div>
   </div>
 
+  <!--line saperator-->
+  <div class="border mx-auto d-flex ">
+  </div>
 
-  <!-- section 7 (CONTACT) -->
-  <div class="container-fluid contact-section " id="contact">
+  <!-- service section content -->
+  <div class="container-fluid mx-auto row  px-5  service-section-content ">
 
-    <!--subscription section-->
-    <div class="container subscription-section">
-      <div class="row no-gutters d-flex subscription-section-grid text-white  p-4">
-        <div class="col-md-4  subscribe-heading">
-          <h1 class="heading  mb-0 ">SUBSCRIBE NOW & STAY UPDATED</h1>
+    <!-- service-1 -->
+    <div class="col-md-4 col-sm-6  content-grid ">
+      <div class="card content-card px-0 mx-0 h-100">
+        <img class="card-img-top ml-auto " src="../assets/service-1.jpg" />
+        <div class="card-body px-0 ">
+          <span class="body-heading card-title">WEB DEVELOPMENT</span>
+
+          <p class="card-text body-heading-lead pt-2 ">
+            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+
+          </p>
+
         </div>
-        <div class="col-md-8  subscribe-form-section">
-          <form class="subscribe-form">
-            <div class="form-group ">
-              <div class="row subscribe-form-grid pt-3 pt-md-0">
-                <div class="col-md-8  email-input-column">
-                  <input type="email" class=" email-input   border-top-0 border-left-0 border-right-0  rounded-0 form-control " placeholder="Your Email Address">
-                </div>
-                <div class="col-md-4 pt-3 pt-md-0 subscribe-button-column">
-                  <button class="btn btn-primary  subscribe-button  ">SUBSCRIBE</button>
+      </div>
+    </div>
 
-                </div>
-              </div>
-            </div>
-          </form>
+    <!-- service-2 -->
+    <div class="col-md-4 col-sm-6   content-grid">
+      <div class="card content-card px-0 mx-0 h-100">
+        <img class="card-img-top ml-auto " src="../assets/service-2.jpg" />
+        <div class="card-body px-0">
+          <span class="body-heading card-title">WEB DEVELOPMENT</span>
+
+          <p class="card-text body-heading-lead pt-2">
+            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+
+          </p>
+
         </div>
+      </div>
+    </div>
+
+    <!-- service-3 -->
+    <div class="col-md-4 col-sm-6  content-grid ">
+      <div class="card content-card px-0 mx-0 h-100">
+        <img class="card-img-top ml-auto " src="../assets/service-3.jpg" />
+        <div class="card-body px-0">
+          <span class="body-heading card-title">WEB DEVELOPMENT</span>
+
+          <p class="card-text body-heading-lead pt-2">
+            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+            Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum Lorem Ipsum
+
+          </p>
+
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+
+</section>
+
+
+<!-- section 4 (PORTFOLIO) -->
+<section class="container-fluid portfolio-section" id="portfolio">
+
+  <!--portfolio section header-->
+  <div class="row d-flex portfolio-section-header">
+    <div class="col-12 text-center section-header-content">
+      <h1 class="section-heading text-uppercase">OUR WORKS</h1>
+      <p class="lead px-5 section-sub-heading">
+        Release bandwidth user experience research & development branding termsheet business plan
+        advisor analytics ecosystem entrepreneur
+      </p>
+    </div>
+  </div>
+
+  <!--line saperator-->
+  <div class="border mx-auto d-flex ">
+  </div>
+
+  <!--portfolio section content -->
+  <div class="container-fluid mx-auto d-flex portfolio-section-content row  px-5   ">
+
+    <!-- work-1 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4  content-grid">
+      <div class="card text-black content-card px-0 mx-0 ">
+        <img class="image " src="../assets/service-1.jpg" />
+        <div class="overlay">
+          <div class="card-body bg-light-yellow  px-1 py-5 text-center ">
+            <span class="body-heading card-title ">WEB DEVELOPMENT</span>
+            <p class="card-text body-heading-lead pb-4 pt-2">
+              Some quick example text to build
+
+            </p>
+            <button class="btn text-black view-more-btn ">
+              VIEW MORE
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- work-2 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4   content-grid">
+
+
+      <div class="card content-card px-0 mx-0 ">
+        <img class="image " src="../assets/service-2.jpg" />
+        <div class="overlay">
+          <div class="card-body text-white bg-light-blue  px-1 py-5  text-center ">
+            <span class="body-heading card-title "><i class="fa fa-star-half-o" aria-hidden="true"></i></span>
+            <p class="card-text  body-heading-lead pt-2 font-weight-bold">
+              Half Star
+            </p>
+            <ul class="list-inline pb-3 ">
+              <li class="list-inline-item"><a class="text-white ">Love</a></li>
+              <li class="list-inline-item"><a class="text-white ">Life</a></li>
+              <li class="list-inline-item"><a class="text-white ">Love</a></li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- work-3 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4  content-grid">
+      <div class="card content-card px-0 mx-0 ">
+        <img class="image " src="../assets/service-3.jpg" />
+        <div class="overlay " >
+          <div class="card-body bg-blue text-white  px-1 py-5 text-center ">
+            <span class="body-heading card-title">WEB DEVELOPMENT</span>
+            <p class="card-text body-heading-lead pb-4 pt-2">
+              Some quick example text to build
+
+            </p>
+            <button class="btn view-more-btn">
+              VIEW MORE
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- work-4 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6   content-grid">
+      <div class="card content-card px-0 mx-0 ">
+        <img class="image " src="../assets/service-4.jpg" />
+        <div class="overlay">
+          <div class="card-body bg-pink  px-1 py-5 text-center ">
+            <span class="body-heading card-title">WEB DEVELOPMENT</span>
+            <p class="card-text body-heading-lead pt-2">
+              Some quick example text to build
+
+            </p>
+            <button class="btn view-more-btn">
+              VIEW MORE
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- work-5 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6  content-grid">
+      <div class="card content-card px-0 mx-0 ">
+        <img class="image " src="../assets/service-5.jpg" />
+        <div class="overlay">
+          <div class="card-body bg-white   px-1 py-5 text-center ">
+            <span class="body-heading card-title">WEB DEVELOPMENT</span>
+            <p class="card-text body-heading-lead pt-2">
+              Some quick example text to build
+
+            </p>
+            <button class="btn view-more-btn">
+              VIEW MORE
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- work-6 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4  content-grid">
+      <div class="card content-card px-0 mx-0 ">
+        <img class="image " src="../assets/service-6.jpg" />
+        <div class="overlay">
+          <div class="card-body bg-light-yellow text-black  px-1 py-5 text-center ">
+            <span class="body-heading card-title">WEB DEVELOPMENT</span>
+            <p class="card-text body-heading-lead pt-2">
+              Some quick example text to build
+
+            </p>
+            <button class="btn  view-more-btn">
+              VIEW MORE
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- work-7 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4  content-grid">
+      <div class="card content-card px-0 mx-0 ">
+        <img class="image " src="../assets/service-7.jpg" />
+        <div class="overlay">
+          <div class="card-body bg-light-blue text-white  px-1 py-5 text-center ">
+            <span class="body-heading card-title">WEB DEVELOPMENT</span>
+            <p class="card-text body-heading-lead pt-2">
+              Some quick example text to build
+
+            </p>
+            <button class="btn view-more-btn">
+              VIEW MORE
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- work-8 -->
+    <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4  content-grid">
+      <div class="card content-card px-0 mx-0 ">
+        <img class="image " src="../assets/service-8.jpg" />
+        <div class="overlay">
+          <div class="card-body  bg-blue text-white px-1 py-5 text-center ">
+            <span class="body-heading card-title">WEB DEVELOPMENT</span>
+            <p class="card-text body-heading-lead pt-2">
+              Some quick example text to build
+
+            </p>
+            <button class="btn view-more-btn">
+              VIEW MORE
+            </button>
+          </div>
+        </div>
+
       </div>
     </div>
 
   </div>
 
 
-  <!-- FOOTER -->
-  <footer class="container-fluid bg-black mx-0 py-3 text-center text-muted footer ">
+
+</section>
+
+
+<!-- section 5 (TEAM) -->
+<section class="container-fluid team-section" id="team">
+
+  <!--team section  header-->
+  <div class="row d-flex team-section-header">
+    <div class="col-12 text-center section-header-content">
+      <h1 class="section-heading">THE TEAM</h1>
+      <p class="lead px-5 section-sub-heading">
+        We do everything with out core values of honesty, hard work and trust
+      </p>
+    </div>
+  </div>
+
+  <!--line saperator-->
+  <div class="border mx-auto d-flex ">
+  </div>
+
+  <!-- team section content -->
+  <div class="row d-flex container-fluid content-row team-section-content  mx-auto px-5 ">
+
+    <!-- member-1 -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3  content-grid ">
+      <div class="card content-card">
+        <img class="card-img-top team-member-img " src="../assets/service-1.jpg" />
+        <div class="card-body  ">
+          <h1 class="card-title member-name">NAME</h1>
+          <h4 class="card-subtitle member-designation">Designation</h4>
+          <p class="card-text member-description d-sm-block d-xs-block d-none">
+            Some quick example text to build on the
+            card title and make up the bulk of the card's content.
+          </p>
+          <button class="btn  member-view-profile-button  ">VIEW PROFILE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- member-2 -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 content-grid ">
+      <div class="card content-card">
+        <img class="card-img-top team-member-img " src="../assets/service-1.jpg" />
+        <div class="card-body  ">
+          <h1 class="card-title member-name">NAME</h1>
+          <h4 class="card-subtitle member-designation">Designation</h4>
+          <p class="card-text member-description d-sm-block d-xs-block d-none">
+            Some quick example text to build on the
+            card title and make up the bulk of the card's content.
+          </p>
+          <button class="btn  member-view-profile-button">VIEW PROFILE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- member-3 -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 content-grid ">
+      <div class="card content-card">
+        <img class="card-img-top team-member-img " src="../assets/service-1.jpg" />
+        <div class="card-body  ">
+          <h1 class="card-title member-name">NAME</h1>
+          <h4 class="card-subtitle member-designation">Designation</h4>
+          <p class="card-text member-description d-sm-block d-xs-block d-none">
+            Some quick example text to build on the
+            card title and make up the bulk of the card's content.
+          </p>
+          <button class="btn  member-view-profile-button">VIEW PROFILE</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- member-4 -->
+    <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 content-grid ">
+      <div class="card content-card">
+        <img class="card-img-top team-member-img " src="../assets/service-1.jpg" />
+        <div class="card-body  ">
+          <h1 class="card-title member-name">NAME</h1>
+          <h4 class="card-subtitle member-designation">Designation</h4>
+          <p class="card-text member-description d-sm-block d-xs-block d-none">
+            Some quick example text to build on the
+            card title and make up the bulk of the card's content.
+          </p>
+          <button class="btn  member-view-profile-button">VIEW PROFILE</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- section 6 (PRICING) -->
+<section class="container-fluid pricing-section   " id="pricing">
+
+  <!-- pricing section header-->
+  <div class="row d-flex pricing-section-header ">
+    <div class="col-12 text-center section-header-content">
+      <h1 class="section-heading text-uppercase">PRICING</h1>
+      <p class="lead px-5 section-sub-heading">
+        Our built-in payment system allows your merchants to accept both paypal and
+        all of major credit cards
+      </p>
+    </div>
+  </div>
+
+  <!--dash-->
+  <div class="border mx-auto d-flex ">
+  </div>
+
+  <!-- pricing section content -->
+  <div class="row d-flex  container-fluid pricing-section-content mx-auto  px-5 ">
+
+    <!--Starter plan-->
+    <div class=" plan-content-grid col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 ">
+      <div class="row d-flex text-center plan-content-inner-row mx-0">
+        <div class="col-12 border-bottom-black py-3 plan-type-grid  ">
+          <span class="plan-type-name">Starter</span>
+        </div>
+        <div class="col-12 text-black border-bottom-black py-3 plan-price-grid">
+          <span class="plan-price-value"> <sup>$</sup> 6</span>
+        </div>
+        <div class="col-12 border-bottom-black py-2 plan-support-grid">
+          <span class="plan-support-time"> 6 Months Support</span>
+        </div>
+        <div class="col-12 pt-2  plan-buy-grid ">
+          <span class="plan-buy-domain">  1 domain</span>
+          <button class="btn d-block mx-auto mt-4 plan-buy-btn">BUY NOW</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!--Business plan-->
+    <div class="plan-content-grid col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 ">
+      <div class="row d-flex text-center plan-content-inner-row mx-0">
+        <div class="col-12 border-bottom-black py-3 plan-type-grid ">
+          <span class="plan-type-name">Business</span>
+
+        </div>
+        <div class="col-12 border-bottom-black py-3 plan-price-grid">
+          <span class="plan-price-value"> <sup>$</sup> 21</span>
+        </div>
+        <div class="col-12 border-bottom-black py-2 plan-support-grid">
+          <span class="plan-support-time"> 6 Months Support</span>
+        </div>
+        <div class="col-12 pt-2  plan-buy-grid ">
+          <span class="plan-buy-domain">  1 domain</span>
+          <button class="btn d-block mx-auto mt-4 plan-buy-btn">BUY NOW</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Advance plan -->
+    <div class="plan-content-grid col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 ">
+      <div class="row d-flex text-center plan-content-inner-row mx-0">
+        <div class="col-12 border-bottom-black py-3 plan-type-grid ">
+          <span class="plan-type-name">Advanced</span>
+        </div>
+        <div class="col-12 border-bottom-black py-3 plan-price-grid">
+          <span class="plan-price-value"> <sup>$</sup> 48</span>
+        </div>
+        <div class="col-12 border-bottom-black py-2 plan-support-grid">
+          <span class="plan-support-time"> 6 Months Support</span>
+        </div>
+        <div class="col-12 pt-2  plan-buy-grid ">
+          <span class="plan-buy-domain">  1 domain</span>
+          <button class="btn d-block mx-auto mt-4 plan-buy-btn">BUY NOW</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- section 7 (CONTACT) -->
+<section class="container-fluid contact-section " id="contact">
+  <!-- pricing section header-->
+  <div class="row d-flex contact-section-content px-5 mx-auto">
+    <div class="col-12 col-sm-6 col-md-12 col-lg-4 col-xl-4  section-grid">
+      <h1 class="text-uppercase"> subscribe now & stay updated</h1>
+    </div>
+    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex section-grid">
+      <form class="p-0 w-100 mt-auto">
+        <div class="form-group p-0">
+          <input type="email" placeholder="Your Email Address" class="form-control email-input"/>
+        </div>
+      </form>
+    </div>
+    <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 d-flex section-grid">
+      <button class="text-uppercase btn mt-auto">SUBSCRIBE</button>
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+<footer >
+
+  <!--about company-->
+  <section class="container-fluid  footer-main-container ">
+
+    <div  class=" footer-top-section row d-flex mx-auto  text-white font-weight-light px-5" >
+      <div class="col-12 col-lg-4 col-xl-4 col-sm-12 col-md-4 section-grid">
+
+        <div class="row no-gutters section-inner-row">
+
+          <!-- about -->
+          <div class="col-12 footer-heading">
+            <h1 >About</h1>
+          </div>
+
+          <div class="col-12  text-justify description ">
+            Promact was founded in 2003 with a clear mission to create a
+            culturally unique software company that not only delivers the best product but is
+            always ahead in learning to use the latest technology.
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-4 col-xl-4 col-md-4 col-sm-12 section-grid">
+
+        <div class="row no-gutters section-inner-row">
+
+          <!-- social -->
+          <div class="col-12 footer-heading">
+            <h1 >Social</h1>
+          </div>
+
+          <div class="col-12  text-justify font-15 description ">
+            <a href="#" class="text-white ">
+              <i class="fa social-icon fa-facebook " aria-hidden="true"></i>
+            </a>
+            <a href="#" class="text-white">
+              <i class="fa social-icon fa-twitter  " aria-hidden="true"></i>
+            </a>
+            <a href="#" class="text-white">
+              <i class="fa social-icon fa-google-plus  " aria-hidden="true"></i>
+            </a>
+            <a href="#" class="text-white">  <i class="fa social-icon   fa-linkedin " aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="col-12 col-sm-12 col-lg-4 col-xl-4 col-md-4 section-grid">
+        <div class="row no-gutters section-inner-row">
+          <!-- contact -->
+          <div class="col-12 footer-heading ">
+            <h1 >Contact</h1>
+          </div>
+
+          <div class="col-12  text-justify description">
+            Promact infotech Pvt. Ltd.<br />
+            Manjalpur, Vadodara<br />
+            India -390011
+          </div>
+
+          <div class="col-12 pt-3 text-justify description ">
+            <a href="#" class="text-white">info@promactinfo.com</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!--copyright-->
+  <section class="container-fluid   mx-0 py-3  text-center text-muted copyright">
     Copyright &copy; 2019 amaze-theme. All Rights Reserved.
-  </footer>
+  </section>
 
-
-
+</footer>

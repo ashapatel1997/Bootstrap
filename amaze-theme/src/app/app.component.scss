@@ -1,30 +1,20 @@
+@import './styles/common-class/common.scss';
 
 
-/*styles for portfolio section*/
-/*@import './styles/section-4-portfolio/section-4-portfolio.scss';*/
-
-/*styles for team section*/
-@import './styles/section-5-team/section-5-team.scss';
-
-/*styles for pricing section*/
-@import './styles/section-6-pricing/section-6-pricing.scss';
-
-/*styles for contact section*/
-@import './styles/section-7-contact/section-7-contact.scss';
-
-
-/*----------header--------------*/
+/*----------HEADER--------------*/
 .app-header { width: 100%; height: 50px; /*header logo*/ .app-header-logo { margin-left: 150px; font-size: 25px; }
-  .app-header-navbar { margin-right: 150px; font-size: $small-font; font-weight: 600; padding-bottom: 0px;
+  .app-header-navbar { margin-right: 150px; font-size: $small-font; font-weight: 600; padding-bottom: $pb-0;
     .navbar-toggler {
       .menu-icon { color: $deep-orange; }
+      &:focus { outline: none; box-shadow: none }
+      &:active { outline: none; box-shadow: none }
     }
   }
 }
 
 ul {
   li { margin-left: 25px;
-    a { color: $text-color; padding-bottom: 0px; margin-bottom: 0px;
+    a { color: $text-color; padding-bottom: $pb-0; margin-bottom: $mb-0;
       &:hover { color: $deep-orange; border-bottom: 2px solid $deep-orange; }
     }
   }
@@ -32,7 +22,6 @@ ul {
 
 
 /*-----------section-1 (HOME)-------------*/
-
 .home-section {
   .slide-indicators {
     li { background-color: $deep-orange !important; }
@@ -54,8 +43,8 @@ ul {
     .btn {
       @include button-style($deep-orange,50px,185px,$medium-font,$mt-10);
       &:hover { background-color: #d85b0e; }
-      &:focus { outline: $deep-orange; box-shadow: none; }
-      &:active { outline: $deep-orange; box-shadow: none; }
+      &:focus {  box-shadow: none; }
+      &:active {  box-shadow: none; }
     }
   }
 }
@@ -75,8 +64,8 @@ ul {
     .btn {
       @include button-style($deep-orange,50px,185px,$medium-font,$mt-20);
       &:hover { background-color: #d85b0e; }
-      &:focus { outline: $deep-orange; box-shadow: none; }
-      &:active { outline: $deep-orange; box-shadow: none; }
+      &:focus { box-shadow: none; }
+      &:active { box-shadow: none; }
     }
   }
 }
@@ -96,20 +85,20 @@ ul {
     .btn {
       @include button-style($deep-orange,50px,185px,$medium-font,$mt-20);
       &:hover { background-color: #d85b0e; }
-      &:focus { outline: $deep-orange; box-shadow: none; }
-      &:active { outline: $deep-orange; box-shadow: none; }
+      &:focus {  box-shadow: none; }
+      &:active { box-shadow: none; }
     }
   }
 }
 
 
 /*-----------section-2 (ABOUT)-----------*/
-.about-section { background-color: black;
-  .about-section-header { padding-top: 80px;
+.about-section { background-color: black; padding-top: $pt-80; padding-bottom: $pb-95;
+  .about-section-header {
     .section-header-content {
       .section-heading {
         color: $deep-orange;
-        margin-bottom: 15px;
+        margin-bottom: $mb-15;
         @include font($extra-large-font,$semi-bold);
       }
       .section-sub-heading {
@@ -121,18 +110,16 @@ ul {
   }
 }
 
-.about-section-content { padding-bottom: 95px;
-  .content-img {
-    img { height: 100%;border:none; }
-  }
-  .content-data {
+.about-section-content { width: 90%;
+  .content-grid { padding: 0px 15px;
+    img { height: 100%; border: none; }
     .content-data-heading {
 
-      @include font(20px,$semi-bold);
+      @include font(25px,$semi-bold);
     }
     ul { padding: 20px 0px 0px;
       li {
-        padding-bottom: 10px;
+        padding-bottom: $pb-10;
         @include font($larg-font,$normal);
       }
     }
@@ -141,12 +128,12 @@ ul {
 
 
 /*---------section-3 (SERVICES)----------*/
-.services-section { background-color: $light-grey;
-  .services-section-header { padding-top: 80px;
+.services-section { background-color: $light-grey; padding-top: $pt-80; padding-bottom: $pb-95;
+  .services-section-header {
     .section-header-content {
       .section-heading {
         color: $deep-orange;
-        margin-bottom: 15px;
+        margin-bottom: $mb-15;
         @include font($extra-large-font,$semi-bold);
       }
       .section-sub-heading {
@@ -158,9 +145,9 @@ ul {
   }
 }
 
-.service-section-content { padding-bottom: 95px; width: 90%;
+.service-section-content {  width: 90%;
 
-  .content-grid { padding: 0px 20px;
+  .content-grid { padding: 0px 15px;
     .content-card { background-color: $light-grey; border: none;
       .card-img-top { border-radius: unset; }
       .card-body { padding: 40px;
@@ -178,37 +165,47 @@ ul {
 
 
 /*---------section-4 (PORTFOLIO)----------*/
-.portfolio-section { background-color: #000000;
-  .portfolio-section-header { padding-top: 80px;
+.portfolio-section { background-color: #000000; padding-top: $pt-80; padding-bottom: $pb-95;
+  .portfolio-section-header {
     .section-header-content {
       .section-heading {
         color: $deep-orange;
-        margin-bottom: 15px;
+        margin-bottom: $mb-15;
         @include font($extra-large-font,$semi-bold);
+        transition: 2s;
+
+        &:hover {
+          @include font($larg-font,$bold);
+        }
       }
       .section-sub-heading {
         color: white;
         width: 75%;
         margin: 0 auto;
+        transition: 2s;
         @include font($larg-font,$normal);
+
+        &:hover {
+          @include font($medium-font,$semi-bold);
+        }
       }
     }
   }
 }
 
-.portfolio-section-content { padding-bottom: 95px; width: 90%;
-  .content-grid { margin-bottom: 30px; padding: 0px 15px;
+.portfolio-section-content {  width: 90%;
+  .content-grid { margin-bottom: $mb-30; padding: 0px 15px;
     .content-card { border: none; height: 100%; border-radius: 0px; cursor: pointer; transition: all 1s ease-in-out;
       .image { height: 100%; width: 100%; border: none; border-radius: 0px; position: absolute; }
       &:hover { box-shadow: 0px 0px 20px #f2f2f2; transform: scale(1.01);
-        .overlay { opacity: 1; animation: rotate-portfolio-description 2s 1 forwards,; }
+        .overlay { opacity: 1; animation: rotate-portfolio-description 1s 1 forwards,; }
       }
     }
   }
 }
 
 .overlay { z-index: 999; opacity: 0; transition: all 1s ease-in-out;
-  .card-body { opacity: 0.9; margin: 25px;
+  .card-body { opacity: 0.9; margin: 25px; 
     .body-heading {
       cursor: auto;
       @include font($larg-font,$semi-bold);
@@ -230,19 +227,177 @@ ul {
       color: white;
 
       &:hover { background-color: #d85b0e; }
-      &:focus { outline: none; box-shadow: none; }
-      &:active { outline: none; box-shadow: none; }
+      &:focus {  box-shadow: none; }
+      &:active {  box-shadow: none; }
     }
   }
-  animation: rotate-reverse-portfolio-description 2s 1 forwards
+  animation: rotate-reverse-portfolio-description 1s 1 forwards }
 
+
+/*---------section-5 (TEAM)----------*/
+.team-section { background-color: $light-grey; padding-top: $pt-80; padding-bottom: $pb-95;
+  .team-section-header {
+    .section-header-content {
+      .section-heading {
+        color: $deep-orange;
+        margin-bottom: $mb-15;
+        @include font($extra-large-font,$semi-bold);
+      }
+      .section-sub-heading {
+        width: 75%;
+        margin: 0 auto;
+        @include font($larg-font,$normal);
+      }
+    }
+  }
+}
+
+.team-section-content {  width: 90%;
+  .content-grid { margin-bottom: $mb-30; padding: 0px 15px;
+    .content-card { padding: 0px; border: none; transition: 1s; opacity: 0.9; border-top-left-radius: 40%; border-top-right-radius: 40%;
+      .team-member-img { transition: 0.5s; border-top-left-radius: 40%; border-top-right-radius: 40%; }
+      &:hover { cursor: pointer; opacity: 1;
+        .team-member-img { border-top-left-radius: 10%; border-top-right-radius: 10%; }
+      }
+    }
+  }
+}
+
+.card-body { padding: 5px;
+  .member-name {
+    padding-top: $pt-10;
+    text-align: center;
+    @include font($larg-font,$semi-bold);
+  }
+  .member-designation {
+    text-align: center;
+    @include font($medium-font,$normal);
+  }
+  .member-description { margin-top: $mt-20; font-size: $small-font; }
+  .member-view-profile-button {
+    @include button-style($deep-orange,50px,185px,$medium-font,$mt-10);
+    color: white;
+    background-color: $deep-orange !important;
+    width: 100%;
+
+    &:hover { background-color: #d85b0e; }
+    &:focus {  box-shadow: none; }
+    &:active {  box-shadow: none; }
+  }
 }
 
 
+/*-----------section-6 (PRICING)---------*/
+.pricing-section { background-color: black; padding-top: $pt-80; padding-bottom: $pb-95;
+  .pricing-section-header {
+    .section-header-content {
+      .section-heading {
+        color: $deep-orange;
+        margin-bottom: $mb-15;
+        @include font($extra-large-font,$semi-bold);
+      }
+      .section-sub-heading {
+        width: 75%;
+        margin: 0 auto;
+        @include font($larg-font,$normal);
+      }
+    }
+  }
+}
+
+.pricing-section-content {  width: 90%;
+  .plan-content-grid {margin-bottom:30px; padding: 0px 15px; }
+}
+
+.plan-content-inner-row { background-color: #f2f2f2; border-radius: 5px;
+
+  .plan-type-grid {
+    .plan-type-name {
+      @include font($larg-font,$semi-bold);
+    }
+  }
+
+  .plan-price-grid {
+    .plan-price-value {
+      @include font($larg-font,$semi-bold);
+    }
+  }
+
+  .plan-support-grid {
+    .plan-support-time {
+      @include font($medium-font,$normal);
+    }
+  }
+
+  .plan-buy-grid { padding: 5px;
+    .plan-buy-domain {
+      @include font($medium-font,$normal);
+    }
+    .plan-buy-btn { @include font($medium-font,$normal); background-color: $deep-orange; width: 100%;color:white;
+      &:hover { background-color: #d85b0e !important; }
+      &:focus {  box-shadow: none !important; }
+      &:active { box-shadow: none !important; }
+    }
+  }
+}
 
 
-/*-----------------footer------------------*/
-.footer { font-size: $medium-font; }
+/*-----------section-7 (CONTACT)---------*/
+.contact-section { padding-top: $pt-80; padding-bottom: $pb-55; background: url("../assets/service-1.jpg"); background-attachment: fixed; background-size: 100% 100%;
+  .contact-section-content { color: white; width: 90%; }
+}
+
+.section-grid { margin-bottom: $mb-30; padding: 0px 15px;
+
+  h1 {
+    @include font(30px,$semi-bold);
+  }
+
+  form {
+    .form-group {
+      input { color: white; background: none; border: none; border-bottom: 1px solid white; border-radius: unset;
+        &:focus { box-shadow: none; }
+        &:active { box-shadow: none; }
+      }
+    }
+  }
+
+  button { background-color: $deep-orange; color: white; width: 80%; margin-left: 20%; margin-bottom: 1rem;
+    &:hover { background-color: #d85b0e; }
+    &:focus { box-shadow: none; }
+    &:active { box-shadow: none; }
+  }
+}
+
+
+/*-----------------FOOTER------------------*/
+//footer top
+
+.footer-main-container { background-color: #404040;  }
+
+.footer-top-section { width: 90%; padding: 50px 0px; 
+  .section-grid { padding: 0px 15px; }
+}
+
+.section-inner-row {
+  .footer-heading {
+    h1 {
+      color: #a6a6a6;
+      @include font(25px,$semi-bold);
+    }
+  }
+  .description {
+    @include font(15px,$normal);
+    a { margin-right: 10px;
+      i { border-radius: 50%; border: 1px solid white; font-size: 15px; padding-top: 7px; width: 30px; height: 30px; text-align: center;
+        &:hover { background-color: $deep-orange; }
+      }
+    }
+  }
+}
+
+//copyright
+.copyright { background-color: #262626; font-size: $medium-font; }
 
 
 
@@ -261,8 +416,9 @@ ul {
 /*maximum screen width 768px*/
 @media only screen and (max-width:768px)
 {
-  /*----------header--------------*/
-  .app-header { width: 100%; height: auto;
+
+  /*----------HEADER--------------*/
+  .app-header { width: 100%; height: auto; background-color: #10B6DD;
     .app-header-logo { margin-left: 50px; font-size: 25px; position: fixed; }
     .app-header-navbar { margin-right: 50px; font-size: $small-font; font-weight: 600; }
   }
@@ -316,10 +472,18 @@ ul {
     }
   }
 
-  .about-section-content { 
-    .content-data { 
-      ul { padding: 20px 0px 0px 15px;
-        li { font-size: $medium-font;   }
+  .about-section-content {  width: 95%;
+    .content-grid { padding: 0px 15px;
+      img { height: 100%; border: none; }
+      .content-data-heading {
+
+        @include font(20px,$semi-bold);
+      }
+      ul { padding: 20px 0px 0px;
+        li {
+          padding-bottom: 10px;
+          @include font($medium-font,$normal);
+        }
       }
     }
   }
@@ -373,8 +537,8 @@ ul {
     }
   }
 
-  .portfolio-section-content { width:95%;
-    .content-grid { margin-bottom: 30px;}
+  .portfolio-section-content { width: 95%;
+    .content-grid {  padding: 0px 15px; }
   }
 
   .overlay {
@@ -394,27 +558,140 @@ ul {
   }
 
 
+  /*---------section-5 (TEAM)----------*/
+  .team-section {
+    .team-section-header {
+      .section-header-content { width: 95%;
+        .section-heading { margin-bottom: 15px; font-size: 40px; }
+        .section-sub-heading {
+          width: 100%;
+          @include font($medium-font,$normal);
+        }
+      }
+    }
+  }
+
+  .team-section-content {  width: 95%;
+    .content-grid {  padding: 0px 15px; }
+  }
+
+  .card-body { padding: 5px;
+    .member-name {
+      padding-top: 10px;
+      @include font($larg-font,$semi-bold);
+    }
+
+    .member-designation {
+      text-align: center;
+      @include font($medium-font,$normal);
+    }
+
+    .member-description { margin-top: 20px; font-size: $small-font; }
+
+    .member-view-profile-button { height: 40px; font-size: $small-font; }
+  }
+
+
+  /*-----------section-6 (PRICING)---------*/
+  .pricing-section {
+    .pricing-section-header {
+      .section-header-content {
+        .section-heading { font-size: 40px; }
+        .section-sub-heading { width: 100%; font-size: $medium-font; }
+      }
+    }
+  }
+
+  .pricing-section-content {  width: 95%;
+    .plan-content-grid { margin-bottom: 30px; padding: 0px 15px; }
+  }
+
+  .plan-content-inner-row {
+
+    .plan-type-grid {
+      .plan-type-name {
+        @include font($medium-font,$semi-bold);
+      }
+    }
+
+    .plan-price-grid {
+      .plan-price-value {
+        @include font($medium-font,$semi-bold);
+      }
+    }
+
+    .plan-support-grid {
+      .plan-support-time {
+        @include font($small-font,$normal);
+      }
+    }
+
+    .plan-buy-grid { padding: 5px;
+      .plan-buy-domain {
+        @include font($small-font,$normal);
+      }
+      .plan-buy-btn { font-size: $small-font; }
+    }
+  }
+
+
+  /*-----------section-7 (CONTACT)---------*/
+  .contact-section { 
+    .contact-section-content {  width: 95%;  
+    }
+  }
+
+  .section-grid { 
+    button { width: 40%; margin-left: 60%; font-size: $small-font; }
+  }
+
+
+  /*-----------------FOOTER------------------*/
+  //footer top
+  .footer-top-section { width: 95%; 
+    .section-grid { margin-bottom: $mb-30; padding: 0px 15px;
+    }
+  }
+
+  .section-inner-row {
+    .footer-heading {
+      h1 {
+        @include font($larg-font,$semi-bold);
+      }
+    }
+    .description {
+      @include font($small-font,$normal);
+      a {
+        .social-icon { }
+      }
+    }
+  }
+
+  //copyright
+  .copyright { font-size: $medium-font; }
+
 }
 
 
 
 /*maximum screen width 425px*/
+@media only screen and (max-width:425px)
+{
 
-@media only screen and (max-width:425px) {
-
-  /*----------header--------------*/
+  /*----------HEADER--------------*/
   .app-header { width: 100%; height: auto;
-    .app-header-logo { margin-left: 50px; font-size: 25px; margin-top: 10px; position: fixed; }
+                .app-header-logo { margin-left: 50px; font-size: 25px; margin-top: $mt-10; position: fixed; }
     .app-header-navbar { margin-right: 50px; font-size: $small-font; font-weight: 600;
       .navbar-toggler { padding-top: 0px;
         .menu-icon { }
       }
+      .collapse { }
     }
   }
 
-  ul { flex-direction: column; margin: 0px auto;
+  ul { flex-direction: column;
     li {
-      a { color: $text-color; margin: 5px auto; }
+      a { color: $text-color; margin: 5px auto; text-align:center;}
     }
   }
 
@@ -456,31 +733,37 @@ ul {
   }
 
 
-
   /*-----------section-2 (ABOUT)-------------*/
-  .about-section {
-    .about-section-header { padding-top: 50px;
+  .about-section { padding-top: $pt-50; padding-bottom: $pb-30;
+    .about-section-header {
       .section-header-content {
         .section-heading { font-size: $larg-font; }
-        .section-sub-heading { padding: 10px !important; font-size: $extra-small-font; }
+        .section-sub-heading { padding: 0px !important; font-size: $extra-small-font; }
       }
     }
   }
 
-  .about-section-content {padding-bottom:35px ;
-    .content-data { margin-top: 0px;
-      .content-data-heading { font-size: 13px; }
-      ul { padding: 10px 0px 10px 15px;
-        li { font-size: $extra-small-font; }
+  .about-section-content { width: 100%; padding:0px!important;
+    .content-grid { margin-bottom: $mb-20;
+      img { height: 100%; border: none; }
+      .content-data-heading {
+
+        @include font($small-font,$semi-bold);
+      }
+      ul { padding: 10px 0px 0px 10px;
+        li {
+          padding-bottom: 0px;
+          @include font($extra-small-font,$normal);
+        }
       }
     }
   }
 
 
   /*-----------section-3 (SERVICES)-------------*/
-  .services-section {
+  .services-section { padding-top: $pt-50; padding-bottom: $pb-30;
 
-    .services-section-header { padding-top: 50px;
+    .services-section-header {
       .section-header-content {
         .section-heading {
           @include font($larg-font,$semi-bold);
@@ -493,9 +776,9 @@ ul {
     }
   }
 
-  .service-section-content { width: 95%; padding-bottom: 35px;
+  .service-section-content { width: 100%; padding:0px!important;
 
-    .content-grid { padding: 0px 15px;
+    .content-grid { margin-bottom:20px;
       .content-card {
         .card-img-top { }
         .card-body { padding: 20px;
@@ -512,13 +795,9 @@ ul {
   }
 
 
-  /*----------footer--------------*/
-  .footer { font-size: $small-font; }
-
-
   /*-----------section-4 (PORTFOLIO)-------------*/
-  .portfolio-section {
-    .portfolio-section-header { padding-top: 50px;
+  .portfolio-section { padding-top: $pt-50; padding-bottom: $pb-30;
+    .portfolio-section-header {
       .section-header-content {
         .section-heading { font-size: $larg-font; }
         .section-sub-heading { padding: 10px !important; font-size: $extra-small-font; }
@@ -526,10 +805,9 @@ ul {
     }
   }
 
-  .portfolio-section-content { padding-bottom: 35px;
-    .content-grid { margin-bottom: 20px;  }
+  .portfolio-section-content { width:100%; padding:0px!important;
+    .content-grid { margin-bottom: $mb-20;  }
   }
-
 
   .overlay {
     .card-body { padding: 10px !important; margin: 10px;
@@ -538,8 +816,8 @@ ul {
         @include font($extra-small-font,$semi-bold);
       }
       .body-heading-lead {
-        padding-bottom: 0px !important;
-        padding-top: 10px !important;
+        padding-bottom: $pb-0 !important;
+        padding-top: $pt-10 !important;
         @include font($extra-small-font,$normal);
       }
       ul { 
@@ -553,7 +831,91 @@ ul {
       }
     }
   }
+
+
+  /*---------section-5 (TEAM)----------*/
+  .team-section { padding-top: $pt-50; padding-bottom: $pb-30;
+    .team-section-header {
+      .section-header-content {
+        .section-heading { margin-bottom: $mb-15; font-size: $larg-font; }
+        .section-sub-heading {
+          padding: 10px !important;
+          @include font($extra-small-font,$normal);
+        }
+      }
+    }
   }
+
+  .team-section-content { width: 100%; padding: 0px !important;
+    .content-grid { margin-bottom: $mb-20; }
+  }
+
+  .card-body { padding: 5px;
+    .member-name {
+      padding-top: $pt-10;
+      @include font($medium-font,$semi-bold);
+    }
+
+    .member-designation {
+      @include font($small-font,$normal);
+    }
+
+    .member-description { margin-top: $mt-10; font-size: $extra-small-font; }
+    .member-view-profile-button { height: 30px; font-size: $extra-small-font; width: 100%; margin-left: 0%; }
+  }
+
+
+  /*-----------section-6 (PRICING)---------*/
+  .pricing-section { padding-top: $pt-50; padding-bottom: $pb-30;
+    .pricing-section-header {
+      .section-header-content {
+        .section-heading { font-size: $larg-font; }
+        .section-sub-heading { padding: 10px !important; font-size: $extra-small-font; }
+      }
+    }
+  }
+
+  .pricing-section-content {  width: 100%;padding:0px!important;
+    .plan-content-grid { margin-bottom: $mb-20; }
+  }
+
+
+
+  /*-----------section-7 (CONTACT)---------*/
+  .contact-section { padding-top: $pt-50; padding-bottom: $pb-50;
+    .contact-section-content { width: 100%; padding: 0px !important; }
+  }
+
+  .section-grid { margin-bottom: $mb-0; padding: 0px 15px;
+    h1 {
+      padding-bottom: 10px;
+      @include font(20px,$semi-bold);
+    }
+
+    form {
+      .form-group {
+        input { font-size: $small-font;
+        }
+      }
+    }
+
+    button {  width: 40%; margin-left: 0%;  font-size: $small-font; }
+  }
+
+
+  /*-----------------FOOTER------------------*/
+  //footer top
+  .footer-main-container { padding-top: $pt-50; padding-bottom: $pb-30; }
+
+  .footer-top-section { width: 100%; padding: 0px !important;
+    .section-grid { margin-bottom: $mb-20; padding: 0px 15px; }
+  }
+
+  //copyright
+  .copyright { font-size: $extra-small-font; }
+
+
+}
 
 
 
