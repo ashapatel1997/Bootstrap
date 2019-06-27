@@ -24,7 +24,7 @@ export class AppComponent implements OnInit {
   menuItems: menuItem[];
 
   //get selected item from menu
-  selectedItem: string="home";
+  selectedItem: string ="home";
 
   //boolean value false for scroll offset <=10 
   scrolled: boolean = false;
@@ -51,6 +51,7 @@ export class AppComponent implements OnInit {
   /** called after Angular has initialized all data-bound properties of a directive. */
   ngOnInit()
   {
+    
     //menu item id,name,value
     this.menuItems =
       [

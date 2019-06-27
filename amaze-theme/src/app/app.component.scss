@@ -21,6 +21,8 @@ ul {
     a { color: $text-color; padding-bottom: $pb-0; margin-bottom: $mb-0;
       &:hover { color: $deep-orange; border-bottom: 2px solid $deep-orange; }
     }
+    
+    
   }
 }
 
@@ -28,7 +30,9 @@ ul {
 /*-----------section-1 (HOME)-------------*/
 .home-section {
   .slide-indicators {
-    li { background-color: $deep-orange !important; }
+    li { background-color: $deep-orange !important;
+
+    }
   }
 }
 
@@ -450,17 +454,18 @@ ul {
   }
 
   //header menu items
-  ul { flex-direction: row; width: 100%;margin:0px 0px;
-    li { margin-left: 10px; }
+  ul { width: 100%; margin: 0px 0px;
+    li { margin-left: 10px;  }
   }
 
   /*-----------section-1 (HOME)-------------*/
+
   //slide-1
   .slide-1 {
 
     .slide-1-caption {
       .slide-heading { font-size: 40px; width: 100%; }
-      .slide-sub-heading { font-size: $medium-font; }
+      .slide-sub-heading {font-size: $medium-font; }
       .btn {
         @include button-style($deep-orange,40px,155px,$small-font,$mt-10);
       }
@@ -725,37 +730,43 @@ ul {
 }
 
 
-/*maximum screen width 425px*/
-@media only screen and (max-width:425px)
+/*maximum screen width 767px*/
+@media only screen and (max-width:767px)
 {
-
   /*----------HEADER--------------*/
   //app top header
   .app-header { width: 100%; height: auto;
-                .app-header-logo { margin-left: 50px; font-size: 25px; margin-top: $mt-10; position: fixed; }
-    .app-header-navbar { margin-right: 50px; font-size: $small-font; font-weight: 600;
+    .app-header-logo { margin-left: 50px; font-size: 25px; margin-top: $mt-10; position: fixed; }
+    .app-header-navbar { padding-left: 30px; margin-right: 50px; font-size: $small-font; font-weight: 600;
       .navbar-toggler { padding-top: 0px;
         .menu-icon { }
       }
-      .collapse { }
+      .collapse { width: calc(100vw - 100px); }
     }
   }
 
   //header menu items
-  ul { flex-direction: column;
+  ul {
     li {
-      a { color: $text-color; margin: 5px auto; text-align:center;}
+      a { color: $text-color; margin: 5px auto; text-align: center; }
     }
   }
+}
+
+
+
+
+/*maximum screen width 425px*/
+@media only screen and (max-width:425px)
+{
 
   /*-----------section-1 (HOME)-------------*/
 
   //slide-1
   .slide-1 {
-
     .slide-1-caption { top: 30%;
       .slide-heading { font-size: $larg-font; }
-      .slide-sub-heading { font-size: $small-font; }
+      .slide-sub-heading {padding:0px!important; font-size: $small-font; }
       .btn {
         padding: $p-0;
         @include button-style($deep-orange,30px,125px,$small-font,$mt-0);

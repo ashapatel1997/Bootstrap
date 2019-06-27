@@ -4,9 +4,8 @@
     "\\src",
     "\\src\\app",
     "\\src\\app\\styles",
-    "\\src\\app\\styles\\common-class",
-    "\\src\\app\\styles\\mixins & variables"
+    "\\src\\app\\styles\\common-class"
   ],
-  "SelectedNode": "\\src\\app\\app.component.scss",
+  "SelectedNode": "\\src\\app\\app.component.html",
   "PreviewInSolutionExplorer": false
 }

@@ -1,13 +1,13 @@
 
 
 <!-- HEADER -->
-<header class="app-header d-flex  fixed-top " [ngClass]="{'header-background':scrolled==true}">
+<header   class="app-header d-flex  fixed-top " [ngClass]="{'header-background':scrolled==true}">
 
   <!--header logo-->
   <div class="app-header-logo text-deep-orange font-weight-bold   my-auto">AMAZE</div>
 
   <!--header menu-->
-  <nav class="app-header-navbar  navbar navbar-expand-md ml-auto my-auto  " id="nav-menu">
+  <nav class="app-header-navbar  navbar navbar-expand-md ml-auto my-auto " id="nav-menu">
 
     <!-- toggle button-->
     <button class="navbar-toggler ml-auto" data-toggle="collapse" data-target="#navBar" aria-expanded="false">
@@ -19,7 +19,7 @@
       <ul class="navbar-nav ">
         <!--menu list items-->
         <li class="nav-item  " *ngFor="let item of menuItems;" data-toggle="collapse" data-target=".navbar-collapse.show">
-          <a class="nav-link p-0 text-uppercase" href="#{{item.name}}" [ngClass]="{'active-link': selectedItem == item.name }" (click)="listClick($event, item)">{{item.name}}</a>
+          <a class="nav-link p-0 text-uppercase active" href="#{{item.name}}" [ngClass]="{'active-link': selectedItem == item.name }" (click)="listClick($event, item)">{{item.name}}</a>
         </li>
       </ul>
     </div>
@@ -34,7 +34,7 @@
 
   <!--slide indicator-->
   <ol class="carousel-indicators slide-indicators">
-    <li data-target="#home" data-slide-to="0" class="active"></li>
+    <li data-target="#home" data-slide-to="0" ></li>
     <li data-target="#home" data-slide-to="1"></li>
     <li data-target="#home" data-slide-to="2"></li>
   </ol>
