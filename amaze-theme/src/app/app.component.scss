@@ -21,7 +21,7 @@ ul {
   li { margin-left: 25px;
     a { color: $text-color; padding-bottom: $pb-0; margin-bottom: $mb-0;
       &:hover { color: $deep-orange; border-bottom: 2px solid $deep-orange; }
-    } 
+    }
   }
 }
 
@@ -29,9 +29,7 @@ ul {
 /*-----------section-1 (HOME)-------------*/
 .home-section {
   .slide-indicators {
-    li { background-color: $deep-orange !important;
-
-    }
+    li { background-color: $deep-orange !important; }
   }
 }
 
@@ -39,70 +37,42 @@ ul {
 //slide-1
 .slide-1 {
   @include slider-banner-background("../assets/section-1-bg.jpg");
-  .slide-1-caption { top: 25%; color: black;
-    .slide-heading {
-      width: 75%;
-      margin: 0px auto;
-      line-height: 1.3;
-      @include font($extra-large-font,$semi-bold);
-    }
-    .slide-sub-heading {
-      @include font($larg-font,$normal);
-    }
-    .btn {
-      @include button-style($deep-orange,50px,185px,$medium-font,$mt-10);
-      &:hover { background-color: #d85b0e; }
-      &:focus {  box-shadow: none; }
-      &:active {  box-shadow: none; }
-    }
-  }
+
 }
 
 //slide-2
 .slide-2 {
   @include slider-banner-background("../assets/section-1(1)-bg.jpg");
-  .slide-2-caption { top: 25%; color: black;
-    .slide-heading {
-      width: 75%;
-      margin: 0 auto;
-      line-height: 1.3;
-      @include font($extra-large-font,$semi-bold);
-    }
-    .slide-sub-heading {
-      @include font($larg-font,$normal);
-    }
-    .btn {
-      @include button-style($deep-orange,50px,185px,$medium-font,$mt-20);
-      &:hover { background-color: #d85b0e; }
-      &:focus { box-shadow: none; }
-      &:active { box-shadow: none; }
-    }
-  }
+  
+  
 }
 
 //slide-3
 .slide-3 {
   @include slider-banner-background("../assets/section-1(2)-bg.jpg");
-  .slide-3-caption { top: 25%; color: black;
-    .slide-heading {
-      width: 75%;
-      margin: 0 auto;
-      line-height: 1.3;
-      @include font($extra-large-font,$semi-bold);
-    }
-    .slide-sub-heading {
-      @include font($larg-font,$normal);
-    }
-    .btn {
-      @include button-style($deep-orange,50px,185px,$medium-font,$mt-20);
-      &:hover { background-color: #d85b0e; }
-      &:focus {  box-shadow: none; }
-      &:active { box-shadow: none; }
-    }
-  }
+  
 }
 
 
+
+//slide caption
+.slide-caption { top: 25%; color: black;
+  .slide-heading {
+    width: 75%;
+    margin: 0px auto;
+    line-height: 1.3;
+    @include font($extra-large-font,$semi-bold);
+  }
+  .slide-sub-heading {
+    @include font($larg-font,$normal);
+  }
+  .btn {
+    @include button-style($deep-orange,50px,185px,$medium-font,$mt-10);
+    &:hover { background-color: #d85b0e; }
+    &:focus { box-shadow: none; }
+    &:active { box-shadow: none; }
+  }
+}
 /*-----------section-2 (ABOUT)-----------*/
 
 //about section heading
@@ -143,7 +113,7 @@ ul {
 
 /*---------section-3 (SERVICES)----------*/
 
-//services section heading 
+//services section heading
 .services-section { background-color: $light-grey; padding-top: $pt-80; padding-bottom: $pb-95;
   .services-section-header {
     .section-header-content {
@@ -162,7 +132,7 @@ ul {
 }
 
 //services section content
-.service-section-content {  width: 90%;
+.service-section-content { width: 90%;
 
   .content-grid { padding: 0px 15px;
     .content-card { background-color: $light-grey; border: none;
@@ -213,7 +183,7 @@ ul {
 }
 
 //portfolio section content
-.portfolio-section-content {  width: 90%;
+.portfolio-section-content { width: 90%;
   .content-grid { margin-bottom: $mb-30; padding: 0px 15px;
     .content-card { border: none; height: 100%; border-radius: 0px; cursor: pointer; transition: all 1s ease-in-out;
       .image { height: 100%; width: 100%; border: none; border-radius: 0px; position: absolute; }
@@ -226,7 +196,7 @@ ul {
 
 //portfolio overalays
 .overlay { z-index: 999; opacity: 0; transition: all 1s ease-in-out;
-  .card-body { opacity: 0.9; margin: 25px; 
+  .card-body { opacity: 0.9; margin: 25px;
     .body-heading {
       cursor: auto;
       @include font($larg-font,$semi-bold);
@@ -248,8 +218,8 @@ ul {
       color: white;
 
       &:hover { background-color: #d85b0e; }
-      &:focus {  box-shadow: none; }
-      &:active {  box-shadow: none; }
+      &:focus { box-shadow: none; }
+      &:active { box-shadow: none; }
     }
   }
   animation: rotate-reverse-portfolio-description 1s 1 forwards }
@@ -275,8 +245,8 @@ ul {
   }
 }
 
-//team section content and memeber image 
-.team-section-content {  width: 90%;
+//team section content and memeber image
+.team-section-content { width: 90%;
   .content-grid { margin-bottom: $mb-30; padding: 0px 15px;
     .content-card { padding: 0px; border: none; transition: 1s; opacity: 0.9; border-top-left-radius: 40%; border-top-right-radius: 40%;
       .team-member-img { transition: 0.5s; border-top-left-radius: 40%; border-top-right-radius: 40%; }
@@ -306,8 +276,8 @@ ul {
     width: 100%;
 
     &:hover { background-color: #d85b0e; }
-    &:focus {  box-shadow: none; }
-    &:active {  box-shadow: none; }
+    &:focus { box-shadow: none; }
+    &:active { box-shadow: none; }
   }
 }
 
@@ -332,43 +302,43 @@ ul {
   }
 }
 
-//pricing section content 
-.pricing-section-content {  width: 90%;
-  .plan-content-grid {margin-bottom:30px; padding: 0px 15px; }
+//pricing section content
+.pricing-section-content { width: 90%;
+  .plan-content-grid { margin-bottom: 30px; padding: 0px 15px; }
 }
 
 //content inner row for plan description
 .plan-content-inner-row { background-color: #f2f2f2; border-radius: 5px;
-
-  //plan name
-  .plan-type-grid {
+                          /*plan name*/
+                          .plan-type-grid {
     .plan-type-name {
       @include font($larg-font,$semi-bold);
     }
   }
-
-  //plan price
+  /*plan price*/
   .plan-price-grid {
     .plan-price-value {
       @include font($larg-font,$semi-bold);
     }
   }
-
-  //plan support time
+  /*plan support time*/
   .plan-support-grid {
     .plan-support-time {
       @include font($medium-font,$normal);
     }
   }
-
-  //domain
+  /*domain*/
   .plan-buy-grid { padding: 5px;
     .plan-buy-domain {
       @include font($medium-font,$normal);
     }
-    .plan-buy-btn { @include font($medium-font,$normal); background-color: $deep-orange; width: 100%;color:white;
+    .plan-buy-btn {
+      @include font($medium-font,$normal);
+      background-color: $deep-orange;
+      width: 100%;
+      color: white;
       &:hover { background-color: #d85b0e !important; }
-      &:focus {  box-shadow: none !important; }
+      &:focus { box-shadow: none !important; }
       &:active { box-shadow: none !important; }
     }
   }
@@ -384,13 +354,11 @@ ul {
 
 //contact section content (heading, subscribtion form)
 .section-grid { margin-bottom: $mb-30; padding: 0px 15px;
-
-  //left heading
-  h1 {
+                /*left heading*/
+                  h1 {
     @include font(30px,$semi-bold);
   }
-
-  //email input
+  /*email input*/
   form {
     .form-group {
       input { color: white; background: none; border: none; border-bottom: 1px solid white; border-radius: unset;
@@ -399,8 +367,7 @@ ul {
       }
     }
   }
-
-  //subscribe button
+  /*subscribe button*/
   button { background-color: $deep-orange; color: white; width: 80%; margin-left: 20%; margin-bottom: 1rem;
     &:hover { background-color: #d85b0e; }
     &:focus { box-shadow: none; }
@@ -412,9 +379,9 @@ ul {
 /*-----------------FOOTER------------------*/
 
 //footer top
-.footer-main-container { background-color: #404040;  }
+.footer-main-container { background-color: #404040; }
 
-.footer-top-section { width: 90%; padding: 50px 0px; 
+.footer-top-section { width: 90%; padding: 50px 0px;
   .section-grid { padding: 0px 15px; }
 }
 
@@ -441,59 +408,33 @@ ul {
 
 
 /*maximum screen width 768px*/
-@media only screen and (max-width:768px)
-{
+@media only screen and (max-width:768px) {
 
   /*----------HEADER--------------*/
 
   //app top header
   .app-header { padding: 5px 0px; width: 100%; height: auto; background-color: #10B6DD;
-    .app-header-logo { margin-left: 50px;  }
+    .app-header-logo { margin-left: 50px; }
     .app-header-navbar { margin-right: 50px; font-size: $small-font; }
   }
 
   //header menu items
   ul { width: 100%; margin: 0px 0px;
-    li { margin-left: 10px;  }
+    li { margin-left: 10px; }
   }
 
   /*-----------section-1 (HOME)-------------*/
 
-  //slide-1
-  .slide-1 {
+  //slide caption
+ 
 
-    .slide-1-caption {
-      .slide-heading { font-size: 40px; width: 100%; }
-      .slide-sub-heading {font-size: $medium-font; }
-      .btn {
-        @include button-style($deep-orange,40px,155px,$small-font,$mt-10);
-      }
-    }
-  }
-
-  //slide-2
-  .slide-2 {
-
-    .slide-2-caption {
+    .slide-caption {
       .slide-heading { font-size: 40px; width: 100%; }
       .slide-sub-heading { font-size: $medium-font; }
       .btn {
         @include button-style($deep-orange,40px,155px,$small-font,$mt-10);
       }
     }
-  }
-
-  //slide-3
-  .slide-3 {
-
-    .slide-3-caption {
-      .slide-heading { font-size: 40px; width: 100%; }
-      .slide-sub-heading { font-size: $medium-font; }
-      .btn {
-        @include button-style($deep-orange,40px,155px,$small-font,$mt-10);
-      }
-    }
-  }
 
 
   /*-----------section-2 (ABOUT)-------------*/
@@ -509,7 +450,7 @@ ul {
   }
 
   //about section content
-  .about-section-content {  width: 95%;
+  .about-section-content { width: 95%;
     .content-grid { padding: 0px 15px;
       img { height: 100%; border: none; }
       .content-data-heading {
@@ -528,7 +469,7 @@ ul {
 
   /*-----------section-3 (SERVICES)-------------*/
 
-  //services section heading 
+  //services section heading
   .services-section {
 
     .services-section-header {
@@ -547,7 +488,7 @@ ul {
     }
   }
 
-  //services section content 
+  //services section content
   .service-section-content { width: 95%;
 
     .content-grid { padding: 0px 15px;
@@ -581,7 +522,7 @@ ul {
 
   //portfolio section content
   .portfolio-section-content { width: 95%;
-    .content-grid {  padding: 0px 15px; }
+    .content-grid { padding: 0px 15px; }
   }
 
   //portfolio overlays
@@ -617,9 +558,9 @@ ul {
     }
   }
 
-  //team section content and memeber image 
-  .team-section-content {  width: 95%;
-    .content-grid {  padding: 0px 15px; }
+  //team section content and memeber image
+  .team-section-content { width: 95%;
+    .content-grid { padding: 0px 15px; }
   }
 
   //team section member details
@@ -652,8 +593,8 @@ ul {
     }
   }
 
-  //pricing section content 
-  .pricing-section-content {  width: 95%;
+  //pricing section content
+  .pricing-section-content { width: 95%;
     .plan-content-grid { margin-bottom: 30px; padding: 0px 15px; }
   }
 
@@ -690,23 +631,21 @@ ul {
 
   /*-----------section-7 (CONTACT)---------*/
 
-  //contact section 
-  .contact-section { 
-    .contact-section-content {  width: 95%;  
-    }
+  //contact section
+  .contact-section {
+    .contact-section-content { width: 95%; }
   }
 
   //contact section content (heading, subscribtion form)
-  .section-grid { 
+  .section-grid {
     button { width: 40%; margin-left: 60%; font-size: $small-font; }
   }
 
 
   /*-----------------FOOTER------------------*/
   //footer top
-  .footer-top-section { width: 95%; 
-    .section-grid { margin-bottom: $mb-30; padding: 0px 15px;
-    }
+  .footer-top-section { width: 95%;
+    .section-grid { margin-bottom: $mb-30; padding: 0px 15px; }
   }
 
   .section-inner-row {
@@ -725,13 +664,11 @@ ul {
 
   //copyright
   .copyright { font-size: $medium-font; }
-
 }
 
 
 /*maximum screen width 767px*/
-@media only screen and (max-width:767px)
-{
+@media only screen and (max-width:767px) {
   /*----------HEADER--------------*/
   //app top header
   .app-header { width: 100%; height: auto;
@@ -750,7 +687,6 @@ ul {
       a { color: $text-color; margin: 5px auto; text-align: center; }
     }
   }
-
 }
 
 /*screen between 767px command 1024px*/
@@ -758,71 +694,38 @@ ul {
 
   /*----------HEADER--------------*/
   //app top header
-  .app-header { 
+  .app-header {
     .app-header-logo { margin-left: 50px; }
-    .app-header-navbar { margin-right: 50px;
-    }
+    .app-header-navbar { margin-right: 50px; }
   }
 }
 
 /*screen between  426px command 767px*/
-@media only screen and (min-width:426px) and (max-width:767px)
-{
+@media only screen and (min-width:426px) and (max-width:767px) {
+
   /*-----------section-1 (HOME)-------------*/
-  //slide-1
-  .slide-1 {
-    .slide-1-caption { left: 50px; right: 50px;
-      .slide-heading { font-size: $larg-font; width: 75%; }
-      .slide-sub-heading { padding: 5px 0px !important; font-size: $medium-font }
-    }
-  }
 
-  //slide-2
-  .slide-2 {
-    .slide-2-caption { left: 50px; right: 50px;
+  //slide caption
+    .slide-caption { left: 50px; right: 50px;
       .slide-heading { font-size: $larg-font; width: 75%; }
       .slide-sub-heading { padding: 5px 0px !important; font-size: $medium-font }
     }
-  }
-
-  //slide-3
-  .slide-3 {
-    .slide-3-caption { left: 50px; right: 50px;
-      .slide-heading { font-size: $larg-font; width: 75%; }
-      .slide-sub-heading { padding: 5px 0px !important; font-size: $medium-font }
-    }
-  }
 }
 
 
 /*maximum screen width 425px*/
-@media only screen and (max-width:425px)
-{
+@media only screen and (max-width:425px) {
 
   /*----------HEADER--------------*/
 
   //app top header
-  .app-header { padding:  0px; 
-  }
+  .app-header { padding: 0px; }
 
   /*-----------section-1 (HOME)-------------*/
 
-  //slide-1
-  .slide-1 {
-    .slide-1-caption { top: 30%; left: 15px; right: 15px;
-      .slide-heading { font-size: $larg-font; width:75%; }
-      .slide-sub-heading { padding:5px 0px !important; font-size: $small-font; }
-      .btn {
-        padding: $p-0;
-        @include button-style($deep-orange,30px,125px,$small-font,$mt-0);
-      }
-    }
-  }
-
-  //slide-2
-  .slide-2 {
-
-    .slide-2-caption { top: 30%; left: 15px; right: 15px;
+  //slide caption
+  
+    .slide-caption { top: 30%; left: 15px; right: 15px;
       .slide-heading { font-size: $larg-font; width: 75%; }
       .slide-sub-heading { padding: 5px 0px !important; font-size: $small-font; }
       .btn {
@@ -830,20 +733,10 @@ ul {
         @include button-style($deep-orange,30px,125px,$small-font,$mt-0);
       }
     }
-  }
+  
 
-  //slide-3
-  .slide-3 {
-
-    .slide-3-caption { top: 30%; left: 15px; right: 15px;
-      .slide-heading { font-size: $larg-font; width: 75%; }
-      .slide-sub-heading { padding: 5px 0px !important; font-size: $small-font; }
-      .btn {
-        padding: $p-0;
-        @include button-style($deep-orange,30px,125px,$small-font,$mt-0);
-      }
-    }
-  }
+  
+  
 
 
   /*-----------section-2 (ABOUT)-------------*/
@@ -859,7 +752,7 @@ ul {
   }
 
   //about section content
-  .about-section-content { width: 100%; padding:0px!important;
+  .about-section-content { width: 100%; padding: 0px !important;
     .content-grid { margin-bottom: $mb-20;
       img { height: 100%; border: none; }
       .content-data-heading {
@@ -878,7 +771,7 @@ ul {
 
   /*-----------section-3 (SERVICES)-------------*/
 
-  //services section heading 
+  //services section heading
   .services-section { padding-top: $pt-50; padding-bottom: $pb-30;
 
     .services-section-header {
@@ -894,10 +787,10 @@ ul {
     }
   }
 
-  //services section content 
-  .service-section-content { width: 100%; padding:0px!important;
+  //services section content
+  .service-section-content { width: 100%; padding: 0px !important;
 
-    .content-grid { margin-bottom:20px;
+    .content-grid { margin-bottom: 20px;
       .content-card {
         .card-img-top { }
         .card-body { padding: 20px;
@@ -927,8 +820,8 @@ ul {
   }
 
   //portfolio section content
-  .portfolio-section-content { width:100%; padding:0px!important;
-    .content-grid { margin-bottom: $mb-20;  }
+  .portfolio-section-content { width: 100%; padding: 0px !important;
+    .content-grid { margin-bottom: $mb-20; }
   }
 
   //portfolio overlays
@@ -943,8 +836,8 @@ ul {
         padding-top: $pt-10 !important;
         @include font($extra-small-font,$normal);
       }
-      ul { 
-        li { font-size:13px;}
+      ul {
+        li { font-size: 13px; }
       }
       .view-more-btn {
         transition: 0.5s;
@@ -971,7 +864,7 @@ ul {
     }
   }
 
-  //team section content and memeber image 
+  //team section content and memeber image
   .team-section-content { width: 100%; padding: 0px !important;
     .content-grid { margin-bottom: $mb-20; }
   }
@@ -1006,7 +899,7 @@ ul {
 
 
   //content inner row for plan description
-  .pricing-section-content {  width: 100%;padding:0px!important;
+  .pricing-section-content { width: 100%; padding: 0px !important;
     .plan-content-grid { margin-bottom: $mb-20; }
   }
 
@@ -1028,12 +921,11 @@ ul {
 
     form {
       .form-group {
-        input { font-size: $small-font;
-        }
+        input { font-size: $small-font; }
       }
     }
 
-    button {  width: 40%; margin-left: 0%;  font-size: $small-font; }
+    button { width: 40%; margin-left: 0%; font-size: $small-font; }
   }
 
 
@@ -1047,18 +939,4 @@ ul {
 
   //copyright
   .copyright { font-size: $extra-small-font; }
-
-
 }
-
-
-
-
-
-
-
-
-
-
-
-
