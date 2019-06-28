@@ -3,7 +3,7 @@
 /*--------------Mixins--------------------*/
 
 /*mixin for slider banner backgound*/
-@mixin slider-banner-background($src) { background: url($src); background-attachment: fixed;  background-repeat: no-repeat; background-size: cover; height: 100vh; }
+@mixin slider-banner-background($src) { background: url($src); background-attachment: fixed;  background-repeat: no-repeat; background-size: cover;  }
 
 
 /*mixin for portfolio background*/
@@ -18,6 +18,9 @@
 
 @mixin button-style($bg,$height, $width,$font-size, $mt) { background-color: $bg; height: $height; width: $width; font-size: $font-size; margin-top: $mt }
 
+
+/*mixin for section top-bottom spacing*/
+@mixin section-top-bottom-spacing($top,$bottom) { padding-top: $top; padding-bottom: $bottom; }
 
 
 /*------------Animation------------*/
